@@ -78,7 +78,7 @@
 
 > Client = Browser | Server = Backend machine
 
-4️⃣ What is RESTful API?
+4️⃣ What is RESTful API? (Representational state transfer)
 ------------------------
 
 **Definition:**API that uses HTTP methods to perform CRUD operations.
@@ -196,7 +196,7 @@
 🌐 Web Basics
 ==============================
 
-1️⃣ What is WWW?
+1️⃣ What is WWW? (world wide web)
 ----------------
 
 **Definition:**Collection of linked web pages on the internet.
@@ -205,7 +205,7 @@
 
 > WWW = Web pages network
 
-2️⃣ What is URL?
+2️⃣ What is URL? (Uniform Resorce Locator)
 ----------------
 
 **Definition:**Address of a resource on the internet.
@@ -223,10 +223,11 @@
 
 > URL = Web address
 
-3️⃣ HTTP vs HTTPS
+3️⃣ HTTP vs HTTPS (Hypertext Transefer Protocal)
 -----------------
 
 **HTTP**
+**Definition:**Address of a resource on the internet.
 
 *   Not secure
     
