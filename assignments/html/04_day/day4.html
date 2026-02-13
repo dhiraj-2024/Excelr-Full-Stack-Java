@@ -1,20 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <Header>
-
+        <div>
+            <h1>Hello welcome to our page this is day 4 assignment</h1>
+        </div>
     </Header>
     <main>
 
-    </main>
-    <footer>
+        <div class="box">
+            <h2>tell me about yourself</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, veniam at? Itaque quidem modi
+                accusantium cumque, non fuga at? Placeat doloremque illo voluptatibus voluptates nisi nostrum quae
+                tempore, sint praesentium!
+                Accusamus minima quibusdam expedita, est architecto mollitia id quasi perspiciatis assumenda! Pariatur,
+                in optio eos inventore sequi doloremque fuga dolor tempore reprehenderit harum error quia corporis
+                aperiam blanditiis, ipsa deserunt!</p>
+        </div>
+         <div class="box">
+            <h2>Importance of div</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, veniam at? Itaque quidem modi
+                accusantium cumque, non fuga at? Placeat doloremque illo voluptatibus voluptates nisi nostrum quae
+                tempore, sint praesentium!
+                Accusamus minima quibusdam expedita, est architecto mollitia id quasi perspiciatis assumenda! Pariatur,
+                in optio eos inventore sequi doloremque fuga dolor tempore reprehenderit harum error quia corporis
+                aperiam blanditiis, ipsa deserunt!</p>
 
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id cumque nesciunt, reiciendis veritatis doloremque dolorum in blanditiis fugit ea obcaecati incidunt temporibus, laudantium, maxime iure perspiciatis vero similique modi. In.
+            </p>
+        </div>
+
+        <section>
+            <div class="box1">
+                div with class selector
+            </div>
+            <div id="boxid">
+                div with id selector
+            </div>
+        </section>
+        <section>
+            <img class="img" src="https://m.media-amazon.com/images/I/51pkwpQHUfL._AC_UF894,1000_QL80_.jpg" alt="7horse painting" title="7_horse_painting">
+        </section>
+        <section>
+            <button type="submit" onclick="submit()">submit</button>
+            <button type="reset" onclick="reset()">reset</button>
+            <button type="button" onclick="button()">button</button>
+        </section>
+
+       
+    <div class="boxe">
+        This is the CONTENT area
+    </div>
+
+    <section>
+        <div>
+            <h1 class="hed">hello this is heading h1</h1>
+            <h2 class="hed2">hello this is heading h2</h2>
+            <p class="para">this is me paragraph</p>
+        </div>
+    </section>
+
+    </main>
+    <footer class="footer">
+        <div>
+            <ul>
+                <li>contact</li>
+                <li>about</li>
+                <li>news</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+               <li class="liicon"><i class="fa-brands fa-instagram"></i></li>
+               <li class="liicon"><i class="fa-brands fa-facebook"></i></li>
+               <li class="liicon"><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </div>
+        <div>
+            <p>this is footer section</p>
+        </div>
     </footer>
+    <script>
+   const headings =  document.getElementsByClassName("para");
+   headings.innerHTML = "new para";
+
+
+        function submit(){
+            alert("submit successfully")
+        }
+
+        function reset(){
+            alert("reset your form")
+        }
+        function button(){
+            alert("this is your button")
+        }
+    </script>
 </body>
+
+
 </html>
