@@ -168,7 +168,7 @@ Example: Contact Information section.
 
 * * *
 
-# 📘 HTML5 – Easy & Clear Interview Notes
+# 📘 HTML5 Interview quetions
 
 * * *
 
