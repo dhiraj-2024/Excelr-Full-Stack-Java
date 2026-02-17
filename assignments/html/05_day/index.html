@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 05 Assignment</title>
+    <style>
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        .navul {
+            display: flex;
+            list-style-type: none;
+            gap: 20px;
+            font-weight: 700;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: green;
+            cursor: pointer;
+        }
+
+        .container {
+            width: 100%;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        .shoping {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .p-1 {
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .table1 {
+            border: 1px solid black;
+            margin-left: 5px;
+            padding: 5px;
+            text-align: center;
+            box-shadow: 1px 2px 1px;
+        }
+
+        .table11 {
+            border-spacing: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <div class="logo">ExcelR</div>
+        <ul class="navul">
+            <li><a href="./signup.html" target="blank">SignUp</a></li>
+            <li><a href="./signin.html">SignIn</a></li>
+            <li><a href="./fd.html">Fullstack Develpment</a></li>
+        </ul>
+    </header>
+    <main>
+
+        <section>
+            <div class="container">
+                <div>
+                    <ul class="shoping">
+                        <li>Flipkart</li>
+                        <li>Amazon</li>
+                        <li>Ajio</li>
+                        <li>Myntra</li>
+                    </ul>
+                </div>
+                <div class="p-1">
+                    <p>Text is not SVG - Cannot display</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Create Tables with Diffrent Type</h1>
+            <div>
+                <table class="table11">
+                    <caption>Table 1</caption>
+                    <tbody>
+                        <tr>
+                            <th class="table1">srno</th>
+                            <th class="table1">p_id</th>
+                            <th class="table1">p_name</th>
+                            <th class="table1">p_cost</th>
+                        </tr>
+                        <tr>
+                            <td class="table1">1</td>
+                            <td class="table1">001</td>
+                            <td class="table1">dhiraj</td>
+                            <td class="table1">100000</td>
+                        </tr>
+                        <tr>
+                            <td class="table1">2</td>
+                            <td class="table1">002</td>
+                            <td class="table1">pooja</td>
+                            <td class="table1">349389</td>
+                        </tr>
+                        <tr>
+                            <td class="table1">3</td>
+                            <td class="table1">003</td>
+                            <td class="table1">pramod</td>
+                            <td class="table1">93824</td>
+                        </tr>
+                        <tr>
+                            <td class="table1">4</td>
+                            <td class="table1">004</td>
+                            <td class="table1">shiv</td>
+                            <td class="table1">23947</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h1>Creating Time Table</h1>
+            <table>
+                <caption>School Time table</caption>
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <th>8:30 - 9:30</th>
+                        <th>9:30 - 10:30</th>
+                        <th>10:30 - 11:30</th>
+                        <th>11:30 - 12:30</th>
+                        <th>12:30 - 2:00</th>
+                        <th>2:00 - 3:00</th>
+                        <th>3:00 - 4:00</th>
+                        <th>4:00 - 5:00</th>
+                    </tr>
+
+                    <tr>
+                        <th>MONDAY</th>
+                        <td>SUB1</td>
+                        <td>SUB1</td>
+                        <td>SUB1</td>
+                        <td>SUB4</td>
+                        <td rowspan="7">L <br> U <br>N <br> C <br> H</td>
+                        <td>SUB1</td>
+                        <td>SUB1</td>
+                        <td>C CLASS</td>
+                    </tr>
+                    <tr>
+                        <th>TUESDAY</th>
+                        <td>SUB2</td>
+                        <td>SUB2</td>
+                        <td>SUB2</td>
+                        <td>----</td>
+                        <!-- <td></td> -->
+                        <td>SUB2</td>
+                        <td>SUB2</td>
+                        <td>LIBRARY</td>
+                    </tr>
+                    <tr>
+                        <th>WEDNESDAY</th>
+                        <td>SUB3</td>
+                        <td>SUB3</td>
+                        <td>SUB3</td>
+                        <td>----</td>
+                        <!-- <td></td> -->
+                        <td colspan="3">LAB</td>
+                    </tr>
+                    <tr>
+                        <th>THURSDAY</th>
+                        <td>SUB4</td>
+                        <td>SUB4</td>
+                        <td>SUB4</td>
+                        <td>----</td>
+                        <!-- <td></td> -->
+                        <td>SUB4</td>
+                        <td>SUB4</td>
+                        <td>LIBRARY</td>
+                    </tr>
+                    <tr>
+                        <th>FRIDAY</th>
+                        <td>SUB5</td>
+                        <td>SUB5</td>
+                        <td>SUB5</td>
+                        <td>----</td>
+                        <!-- <td></td> -->
+                        <td>SUB5</td>
+                        <td>SUB5</td>
+                        <td>LIBRARY</td>
+                    </tr>
+                    <tr>
+                        <th>SATURDAY</th>
+                        <td>SUB3</td>
+                        <td colspan="3">SEMINAR</td>
+                        <!-- <td></td> -->
+                        <td>SUB3</td>
+                        <td>SUB3</td>
+                        <td>LIBRARY</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+
+    </main>
+
+    <script>
+
+        document.querySelectorAll("td").forEach(td => {
+            if (td.textContent.includes("SUB1")) {
+                td.style.color = "red";
+                td.style.fontWeight = 800;
+                td.style.fontFamily = "arial"
+            }
+            if (td.textContent.includes("SUB2")) {
+                td.style.color = "orange"
+                td.style.fontWeight = 800;
+                td.style.fontFamily = "arial"
+            }
+            if (td.textContent.includes("SUB3")) {
+                td.style.color = "blue"
+                td.style.fontWeight = 800;
+                td.style.fontFamily = "arial"
+            }
+            if (td.textContent.includes("SUB4")) {
+                td.style.color = "skyblue"
+                td.style.fontWeight = 800;
+                td.style.fontFamily = "arial"
+            }
+            if (td.textContent.includes("SUB5")) {
+                td.style.color = "purple"
+                td.style.fontWeight = 800;
+                td.style.fontFamily = "arial"
+            }
+
+        })
+    </script>
+</body>
+
+</html>
