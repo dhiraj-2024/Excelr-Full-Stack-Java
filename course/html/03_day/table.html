@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Example</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        tfoot {
+            background-color: lightgray;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<table>
+
+    <caption>Student Marks Table</caption>
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td rowspan="2">Dhiraj</td>
+            <td>Math</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>Science</td>
+            <td>85</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Total</td>
+            <td>175</td>
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Result: Pass</td>
+        </tr>
+    </tfoot>
+
+</table>
+
+</body>
+</html>
