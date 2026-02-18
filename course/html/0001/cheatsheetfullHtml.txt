@@ -1,0 +1,105 @@
+Html FULL Course
+
+Day : 1 ✅
+1. What is HTML?
+2. How websites work (browser, server, client)
+3. HTML versions (HTML5 introduction)
+4. Basic structure
+5. Headings
+6. Paragraph
+7. Line break
+8. Horizontal line
+9. Comments
+10. Tag vs Element
+
+**********************************************************************************
+
+Day : 2 
+1.  Text Formatting
+* <b>, <strong>
+* <i>, <em>
+* <u>
+* <mark>
+* <small>
+* <sub>, <sup>
+* <del>
+
+
+2.Lists
+* Ordered list <ol>
+* Unordered list <ul>
+* Description list <dl>
+
+3.Images
+* <img>
+* alt attribute
+* width/height
+
+**********************************************************************************
+
+Day : 3
+1.Table structure
+2.rowspan
+3.colspan
+4.caption
+5.thead, tbody, tfoot,
+6.Styling basics
+
+**********************************************************************************
+
+Day : 4
+1.<form> basics
+
+2.Input types
+
+* text
+* email
+* password
+* number
+* date
+* time
+* file
+* radio
+* checkbox
+
+3.<label>
+4.<select> dropdown
+5.<textarea>
+6.<button>
+7.Validation
+* required
+* pattern
+* placeholder
+
+
+8.GET vs POST
+
+**********************************************************************************
+
+Day : 5
+
+1.Semantic Elements
+
+<header>
+<nav>
+<section>
+<article>
+<aside>
+<footer>
+<main>
+
+
+2.Media
+
+<audio>
+<video>
+<source>
+
+3.Other Important Tags
+
+<iframe>
+<canvas>
+<progress>
+<meter>
+
+**********************************************************************************
