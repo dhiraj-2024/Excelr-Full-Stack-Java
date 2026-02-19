@@ -1,21 +1,21 @@
 Html FULL Course
 
 Day : 1 ✅
-1. What is HTML?
-2. How websites work (browser, server, client)
-3. HTML versions (HTML5 introduction)
-4. Basic structure
-5. Headings
-6. Paragraph
-7. Line break
-8. Horizontal line
-9. Comments
-10. Tag vs Element
+1. What is HTML? ✅
+2. How websites work (browser, server, client) ✅
+3. HTML versions (HTML5 introduction) ✅
+4. Basic structure ✅
+5. Headings ✅
+6. Paragraph ✅
+7. Line break ✅
+8. Horizontal line ✅
+9. Comments ✅
+10. Tag vs Element  vs empty tag ✅
 
 **********************************************************************************
 
 Day : 2 
-1.  Text Formatting
+1.  Text Formatting ✅
 * <b>, <strong>
 * <i>, <em>
 * <u>
@@ -25,12 +25,12 @@ Day : 2
 * <del>
 
 
-2.Lists
+2.Lists ✅
 * Ordered list <ol>
 * Unordered list <ul>
-* Description list <dl>
+* Description list <dl> 
 
-3.Images
+3.Images 
 * <img>
 * alt attribute
 * width/height
