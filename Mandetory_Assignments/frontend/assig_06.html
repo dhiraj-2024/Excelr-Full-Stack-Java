@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 06 css grid </title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:repeat(2);
+            /* border: 2px solid red; */
+        }
+        .box{
+            /* border: 2px solid black; */
+            height: 100px;
+        }
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            justify-content: center;
+            text-align: center;
+            background-color: rgb(53, 53, 53);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            padding: 20px;
+
+
+        }
+        .footer{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            text-align: center;
+            background-color: rgb(54, 54, 54);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            padding: 20px;
+        }
+        .main{
+            height: 300px;
+        }
+        .sidebar{
+            height: 200px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container">
+            <div class="box header">Header</div>
+            <div class="box sidebar">
+                <h4>Sidebar</h4>
+                <p>The menu or quick access content</p>
+            </div>
+            <div class="box main">
+                <h4>Main content</h4>
+                <p>The core website content should be disply here</p>
+            </div>
+            <div class="box footer">Footer</div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
