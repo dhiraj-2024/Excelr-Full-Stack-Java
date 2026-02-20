@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 05 Flexbox Properties</title>
+    <style>
+        .container {
+            background: #ff4ab1;
+            background: linear-gradient(90deg, rgba(255, 74, 177, 1) 0%, rgba(127, 0, 212, 1) 100%, rgba(224, 83, 237, 1) 42%);
+            height: 100vh;
+            width: 80%;
+            display: flex;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .mainbox {
+            background: #e2ff5e;
+            background: linear-gradient(90deg, rgba(226, 255, 94, 1) 0%, rgba(253, 163, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+        }
+
+        .mainbox2 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mainbox3 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: right;
+        }
+
+        .mainbox4 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .mainbox5 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mainbox6 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .mainbox7 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: start;
+        }
+
+        .mainbox8 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+        }
+
+        .mainbox9 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: last baseline;
+        }
+
+        .mainbox10 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainbox11 {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: last baseline;
+        }
+.mainbox-g {
+            background: #e2ff5e;
+            background: linear-gradient(90deg, rgb(240, 168, 45) 0%, rgba(253, 163, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+        }
+
+        .boxx {
+            height: 50px;
+            width: 50px;
+            border: 2px solid white;
+            background-color: rgb(20, 69, 246);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container">
+            <div class="mainbox mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox2 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox3 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox4 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox5 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox6 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox7 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox8 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox9 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox10 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+            <div class="mainbox11 mainbox-g">
+                <div class="box1 boxx">box1</div>
+                <div class="box2 boxx">box2</div>
+                <div class="box3 boxx">box3</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
