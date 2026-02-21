@@ -30,7 +30,7 @@ Day : 2
 * Unordered list <ul>
 * Description list <dl> 
 
-3.Images 
+3.Images  ✅
 * <img>
 * alt attribute
 * width/height
@@ -38,7 +38,7 @@ Day : 2
 **********************************************************************************
 
 Day : 3
-1.Table structure
+1.Table structure  ✅
 2.rowspan
 3.colspan
 4.caption
@@ -48,7 +48,7 @@ Day : 3
 **********************************************************************************
 
 Day : 4
-1.<form> basics
+1.<form> basics  ✅
 
 2.Input types
 
@@ -72,13 +72,13 @@ Day : 4
 * placeholder
 
 
-8.GET vs POST
+8.GET vs POST 
 
 **********************************************************************************
 
 Day : 5
 
-1.Semantic Elements
+1.Semantic Elements  ✅
 
 <header>
 <nav>
@@ -89,7 +89,7 @@ Day : 5
 <main>
 
 
-2.Media
+2.Media 
 
 <audio>
 <video>

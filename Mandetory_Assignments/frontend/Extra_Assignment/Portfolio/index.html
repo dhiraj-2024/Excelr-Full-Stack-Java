@@ -1,19 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhijra Barwal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: aqua;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .links ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .links ul li {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .profile {
+            background-color: rgb(87, 198, 253);
+            height: 700px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: absolute;
+            top: 200px;
+            z-index: 200;
+        }
+
+        .profile-img img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+
+        .social-logo {
+            color: rgb(223, 0, 34)
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            color: rgb(146, 2, 202);
+
+        }
+
+        .box img {
+            width: 50px;
+        }
+
+        .box1 {
+            height: 500px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .box2 {
+            height: auto;
+            width: 200px;
+            border: 2px solid red;
+        }
+
+        .sub-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        footer {
+            border: 10px solid rgb(86, 0, 234);
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            gap: 400px;
+        }
+        .clouds{
+            width: 100%;
+            height: auto;
+            display:flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-
+        <div class="logo">
+            DHIRAJ-BARWAL
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#acedmics">Acedmics</a></li>
+            </ul>
+        </div>
     </header>
     <main>
+        <section class="profile">
+           
+                <div class="clouds">
+                    <marquee behavior="loop" scrollamount="10" direction="right">
+                        <img src="https://pngimg.com/d/cloud_PNG112234.png" width="1000px" alt="">
+                    </marquee>
+                </div>
+        
+            <div class="container">
+                
+                <div class="profile-img">
+                    <img src="./image.png" alt="profile picture">
+                </div>
+                <div>
+                    <h2>Dhiraj Barwal</h2>
+                    <p>Full Stack Developer</p>
+                </div>
+                <div class="social-logo">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
 
+                </div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <div class="box">
+                <img src="./image.png" alt="">
+                <a href="#">Skills</a>
+            </div>
+            <div class="box">
+                <img src="./image.png" alt="">
+                <a href="#">Projects</a>
+            </div>
+            <div class="box">
+                <img src="./image.png" alt="">
+                <a href="#">Academics</a>
+            </div>
+        </section>
+        <section id="skills" class="skills box1">
+            <h2>Skills</h2>
+            <div class="sub-box">
+                <div class="box2">
+                    <h2>Skill 1</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+                <div class="box2">
+                    <h2>Skill 2</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+                <div class="box2">
+                    <h2>Skill 3</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+
+            </div>
+        </section>
+        <section id="projects" class="projects box1">
+            <h2>Projects</h2>
+            <div class="sub-box">
+                <div class="box2">
+                    <h2>Skill 1</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+                <div class="box2">
+                    <h2>Skill 2</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+                <div class="box2">
+                    <h2>Skill 3</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+            </div>
+        </section>
+        <section id="acedmics" class="acedmics box1">
+            <h2>Acedmics</h2>
+            <div class="sub-box">
+                <div class="box2">
+                    <h2>Skill 1</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+                <div class="box2">
+                    <h2>Skill 2</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+                <div class="box2">
+                    <h2>Skill 3</h2>
+                    <p>Lorem ipsum dolor sit ameimus ut fuga enim ratione laboriosam,
+                        dem nam maxime ullam. Molestiae doloribus dolor impedit autem accusantium.
+                        Illo modi laborum commodi doloribus blanditiis?</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        
+
+        <ul>
+            <li>skills</li>
+            <li>porjects</li>
+            <li>akjdsflj</li>
+        </ul>
+        <ul>
+            <li>skills</li>
+            <li>porjects</li>
+            <li>akjdsflj</li>
+        </ul>
+        <ul>
+            <li>skills</li>
+            <li>porjects</li>
+            <li>akjdsflj</li>
+        </ul>
+
     </footer>
 </body>
+
 </html>
