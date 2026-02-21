@@ -1,19 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhijra Barwal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .links ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .links ul li {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .profile{
+            background-color: rgb(87, 198, 253);
+            height: 700px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-img img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-
+        <div class="logo">
+            DHIRAJ-BARWAL
+        </div>
+        <div class="links">
+            <ul>
+                <li>Skills</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+        </div>
     </header>
     <main>
+        <section class="profile">
+            <div class="container">
+                <div class="profile-img">
+                    <img src="./image.png" alt="profile picture">
+                </div>
+                <div>
+                    <h2>Dhiraj Barwal</h2>
+                    <p>Full Stack Developer</p>
+                </div>
+                <div class="social-logos">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </section>
+        <section>
 
+        </section>
     </main>
     <footer>
-        
     </footer>
 </body>
+
 </html>
