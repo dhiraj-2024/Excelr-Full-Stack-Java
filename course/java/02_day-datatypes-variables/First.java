@@ -16,7 +16,7 @@ class DatatypesAndVariables {
 
 public class First {
     public static void main (String [] argu){
-        Sarent obj = new Sarent();
+        DatatypesAndVariables obj = new DatatypesAndVariables();
         System.out.println(obj.Name + " " + obj.Age + " " + obj.Letter + " " + obj.val + " " + obj.values);
         System.out.println( "The sum of age and val are : "+obj.Age + obj.val);
     }
