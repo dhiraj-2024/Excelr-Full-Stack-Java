@@ -18,7 +18,7 @@
      justify-content: space-between;
      align-items: center;
      padding: 20px;
-     background-color: #333;
+     background-color: #000000;
      color: white;
  }
 
@@ -65,7 +65,7 @@
      top: 20px;
      right: 50px;
      width: 320px;
-     animation: rotateSun 20s linear infinite;
+     animation: rotateSun 10s linear infinite;
  }
 
  /* Clouds */
@@ -130,14 +130,15 @@
  }
 
  .profile-img img {
-     width: 350px;
-     height: 350px;
+     width: 250px;
+     height: 250px;
      border-radius: 50%;
      box-shadow: 2px 2px 4px 2px rgb(255, 12, 121);
      
  }
 .profile-info{
-    mar
+    margin-top: 30px;
+    padding:20px;
 }
  .social-logo {
      color: rgb(240, 240, 240)
