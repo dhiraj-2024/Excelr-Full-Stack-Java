@@ -8,14 +8,14 @@
 </head>
 
 <body>
-    <div>
+    <div id="container">
         <div id="light"></div>
         <div id="box">
             <button id="btn1">On</button>
             <button id="btn2">Off</button>
         </div>
     </div>
-
+    
     <script>
         const light = document.getElementById("light");
         light.style.borderRadius = "50%"
@@ -37,6 +37,14 @@
         box.style.display = "flex"
         box.style.justifyContent = "center"
         box.style.gap = "10px"
+
+        const container = document.getElementById("container");
+        container.style.marginTop = "100px"
+        container.style.display = "flex"
+        container.style.flexDirection = "column"
+        container.style.justifyContent = "center"
+        container.style.alignItems = "center"
+        container.style.gap = "40px"
     </script>
 </body>
 
