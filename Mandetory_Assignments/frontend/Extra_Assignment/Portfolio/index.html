@@ -8,131 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        a{
-            text-decoration: none;
-            color: aqua;
-        }
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .links ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        .links ul li {
-            margin-left: 20px;
-            cursor: pointer;
-        }
-
-        .profile {
-            background-color: rgb(87, 198, 253);
-            height: 700px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            position: absolute;
-            top: 200px;
-            z-index: 200;
-        }
-
-        .profile-img img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-        }
-
-        .social-logo {
-            color: rgb(223, 0, 34)
-        }
-
-        .skills-section {
-            display: flex;
-            justify-content: space-evenly;
-
-        }
-
-        .box {
-            height: 200px;
-            width: 200px;
-            border: 2px solid black;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-weight: 800;
-            color: rgb(146, 2, 202);
-
-        }
-
-        .box img {
-            width: 50px;
-        }
-
-        .box1 {
-            height: 500px;
-            border: 2px solid black;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        .box2 {
-            height: auto;
-            width: 200px;
-            border: 2px solid red;
-        }
-
-        .sub-box {
-            display: flex;
-            justify-content: space-between;
-            gap: 50px;
-        }
-
-        footer {
-            border: 10px solid rgb(86, 0, 234);
-            height: 200px;
-            display: flex;
-            justify-content: space-between;
-            gap: 400px;
-        }
-        .clouds{
-            width: 100%;
-            height: auto;
-            display:flex;
-            flex-direction: column;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -150,6 +26,44 @@
     </header>
     <main>
         <section class="profile">
+
+            <!-- Background Sky Elements -->
+            <div class="sky">
+
+                <img class="sun" src="https://www.freeiconspng.com/thumbs/sun/natural-energy-source-the-sun-transparent-photos-3.png" alt="sun">
+
+                <img class="cloud cloud1" src="https://pngimg.com/d/cloud_PNG112234.png" alt="cloud">
+
+                <img class="cloud cloud2" src="https://pics.clipartpng.com/White_Small_Cloud_PNG_Clipart-879.png"
+                    alt="cloud">
+                <img class="cloud cloud3" src="https://pics.clipartpng.com/White_Small_Cloud_PNG_Clipart-879.png"
+                    alt="cloud">
+
+            </div>
+
+            <!-- Profile Content -->
+            <div class="container">
+
+                <div class="profile-img">
+                    <img src="./image.png" alt="profile picture">
+                </div>
+
+                <div class="profile-info" >
+                    <h2>Dhiraj Barwal</h2>
+                    <p>Full Stack Developer</p>
+                </div>
+
+                <div class="social-logo">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- <section class="profile">
            
                 <div class="clouds">
                     <marquee behavior="loop" scrollamount="10" direction="right">
@@ -174,7 +88,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="skills-section">
             <div class="box">
                 <img src="./image.png" alt="">
