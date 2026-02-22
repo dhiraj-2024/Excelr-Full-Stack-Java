@@ -30,7 +30,11 @@ Day : 2
 * Unordered list <ul>
 * Description list <dl> 
 
+<<<<<<< HEAD
 3.Images 
+=======
+3.Images  ✅
+>>>>>>> d74c0104fc05649571a378114ae204377f59fb66
 * <img>
 * alt attribute
 * width/height
@@ -38,7 +42,11 @@ Day : 2
 **********************************************************************************
 
 Day : 3
+<<<<<<< HEAD
 1.Table structure
+=======
+1.Table structure  ✅
+>>>>>>> d74c0104fc05649571a378114ae204377f59fb66
 2.rowspan
 3.colspan
 4.caption
@@ -48,7 +56,11 @@ Day : 3
 **********************************************************************************
 
 Day : 4
+<<<<<<< HEAD
 1.<form> basics
+=======
+1.<form> basics  ✅
+>>>>>>> d74c0104fc05649571a378114ae204377f59fb66
 
 2.Input types
 
@@ -72,13 +84,21 @@ Day : 4
 * placeholder
 
 
+<<<<<<< HEAD
 8.GET vs POST
+=======
+8.GET vs POST 
+>>>>>>> d74c0104fc05649571a378114ae204377f59fb66
 
 **********************************************************************************
 
 Day : 5
 
+<<<<<<< HEAD
 1.Semantic Elements
+=======
+1.Semantic Elements  ✅
+>>>>>>> d74c0104fc05649571a378114ae204377f59fb66
 
 <header>
 <nav>
@@ -89,7 +109,11 @@ Day : 5
 <main>
 
 
+<<<<<<< HEAD
 2.Media
+=======
+2.Media 
+>>>>>>> d74c0104fc05649571a378114ae204377f59fb66
 
 <audio>
 <video>
