@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Professional Responsive Header</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 200vh;
+            background: linear-gradient(135deg, #1d1d1d, #c4c4c4);
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Container */
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo */
+
+        .logo h1 {
+            font-size: 26px;
+            font-weight: 700;
+
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        /* Nav Links */
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            position: relative;
+        }
+
+        /* Hover underline animation */
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: #00dbde;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger */
+
+        .menu-btn {
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:768px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+
+                background: rgba(0, 0, 0, 0.9);
+
+                max-height: 0;
+                overflow: hidden;
+                transition: 0.4s ease;
+            }
+
+            .nav.active {
+                max-height: 300px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                <h1>Dhiraj</h1>
+            </div>
+
+            <div class="nav" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+
+    </header>
+
+    <script>
+
+        /* Toggle Menu */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navMenu = document.getElementById("navMenu");
+
+        menuBtn.addEventListener("click", () => {
+
+            navMenu.classList.toggle("active");
+
+            /* Change icon */
+
+            if (navMenu.classList.contains("active")) {
+                menuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
