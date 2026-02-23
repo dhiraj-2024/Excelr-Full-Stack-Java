@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive html page learning css </title>
+    <style>
+        .box {
+
+            border: 2px solid red;
+            height: 200px;
+            background-color: brown;
+        }
+
+        @media (max-width:468px) {
+            .box {
+                background-color: blue;
+                display: none;
+            }
+        }
+
+        @media (min-width:768px) {
+            .box h1 {
+                color: greenyellow;
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="box">
+            <h1>Hello this is responsive box</h1>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
