@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(153, 153, 153);
+        }
+
+        .header {
+            height: 70px;
+            width: 100%;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .logo h1 {
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(240deg,
+                    hsl(240deg 100% 20%) 0%,
+                    hsl(281deg 100% 21%) 5%,
+                    hsl(304deg 100% 23%) 10%,
+                    hsl(319deg 100% 30%) 17%,
+                    hsl(329deg 100% 36%) 24%,
+                    hsl(336deg 100% 41%) 32%,
+                    hsl(346deg 83% 51%) 40%,
+                    hsl(3deg 95% 61%) 50%,
+                    hsl(17deg 100% 59%) 59%,
+                    hsl(30deg 100% 55%) 69%,
+                    hsl(40deg 100% 50%) 80%,
+                    hsl(48deg 100% 50%) 90%,
+                    hsl(55deg 100% 50%) 100%);
+
+
+        };
+
+        .menubar i{
+            display: none;
+        }
+
+        .nav-links {
+            
+            font-weight: 800;
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            gap: 30px;
+
+        }
+
+        .span1 {
+            margin: 5px;
+            font-size: 18px;
+            color: aqua;
+        }
+
+        @media (max-width:468px) {
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <h1><a href="#">Logo</a></h1>
+            </div>
+            <div class="nav">
+                <ul class="nav-links">
+                    <li><span class="span1"><i class="fa-regular fa-house"></i></span>Home</li>
+                    <li><span class="span1"><i class="fa-brands fa-whatsapp"></i></span>Contact</li>
+                    <li><span class="span1"><i class="fa-brands fa-dribbble"></i></span>About</li>
+                </ul>
+            </div>
+            <div class="menubar">
+                <i class="fa-solid fa-bars "></i>
+            </div>
+        </div>
+    </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
+    <script>
+        let mnl = document.getElementById("mnl");
+        let menu = document.getElementById("menuu");
+        menu.addEventListener("click", function(){
+            mnl.style.display = block;
+        })
+    </script>
+</body>
+
+</html>
