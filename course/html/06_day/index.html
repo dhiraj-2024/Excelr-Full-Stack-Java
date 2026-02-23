@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>common html tags and elements</title>
+    <style>
+        .box iframe {
+            border: 2px solid red;
+            box-shadow: 2px 2px 3px 4px;
+            width: "600";
+            height: "450";
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <label for="disk_c">Disk usage C:</label>
+        <meter id="disk_c" value="2" min="0" max="10">2 out of 10</meter><br>
+        
+        <label for="disk_d">Disk usage D:</label>
+        <meter id="disk_d" value="0.6">60%</meter>
+        <label for="file">Downloading progress:</label>
+        <progress id="file" value="32" max="100"> 32% </progress>
+        <section>
+            <h1>audio section</h1>
+            <audio controls>
+                <source src="./ringtone.mp3">
+            </audio>
+        </section>
+        <section>
+            <h1>showing map location</h1>
+            <div class="box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31984.918252794865!2d73.74055133389636!3d18.598000780656903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b97aaf571bed%3A0xc67346ba5a76673!2sWakad%2C%20Pimpri-Chinchwad%2C%20Maharashtra!5e1!3m2!1sen!2sin!4v1771852917685!5m2!1sen!2sin"
+                    width="600" height="450" allowfullscreen="" loading="lazy" title="map"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section>
+            <h1>showing video</h1>
+            <div class="box">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4olD6O83204?si=cvMK6UhMQhMos1ze&amp;start=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>
