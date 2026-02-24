@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-box{
+            border: 2px solid red;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+        .box{
+            border: 2px solid black;
+            height: 100px;
+
+        }
+        .header, .footer{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            align-content: center;
+            text-align: center;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight:900;
+        }
+        .sidebar{
+            height: auto;
+            padding-left: 20px;
+        }
+        .sidebar ul li{
+            list-style-type: none;
+            margin-top: 20px;
+            font-weight: 500;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 14px;
+        }
+        .main{
+            height: auto;
+            padding: 20px;
+        }
+
+        .main p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <section class="main-box">
+        <div class="box header">Header</div>
+        <div class="box sidebar">
+            <h3>Html</h3>
+            <ul>
+                <li>Introducation</li>
+                <li>Text Formating</li>
+                <li>Forms</li>
+                <li>Tables</li>
+            </ul>
+        </div>
+        <div class="box main">
+            <div>
+                <h1>Hello This is Html</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis aspernatur eligendi rem eos, nulla libero
+                    nobis rerum dolorem numquam expedita aperiam quidem temporibus perspiciatis minima id iste animi consectetur.
+                    Voluptatum nostrum suscipit ut quis assumenda mollitia a iste optio, sed incidunt nisi sapiente provident
+                    exercitationem, perspiciatis hic nobis aspernatur minus numquam facilis magni porro architecto consectetur in ex?
+                    Veritatis!
+                    Deserunt ab eum perferendis possimus veritatis consectetur ipsam neque eligendi animi cumque incidunt velit quis cum
+                    laborum debitis nulla, necessitatibus impedit explicabo mollitia adipisci, praesentium vitae nostrum. Repellat,
+                    provident beatae.</p>
+            </div>
+            <div>
+                <h1>Hello This is Html</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis aspernatur eligendi rem eos, nulla libero
+                    nobis rerum dolorem numquam expedita aperiam quidem temporibus perspiciatis minima id iste animi consectetur.
+                    Voluptatum nostrum suscipit ut quis assumenda mollitia a iste optio, sed incidunt nisi sapiente provident
+                    exercitationem, perspiciatis hic nobis aspernatur minus numquam facilis magni porro architecto consectetur in
+                    ex?
+                    Veritatis!
+                    Deserunt ab eum perferendis possimus veritatis consectetur ipsam neque eligendi animi cumque incidunt velit quis
+                    cum
+                    laborum debitis nulla, necessitatibus impedit explicabo mollitia adipisci, praesentium vitae nostrum. Repellat,
+                    provident beatae.</p>
+            </div>
+        </div>
+        <div class="box footer">footer</div>
+    </section>
+</body>
+</html>

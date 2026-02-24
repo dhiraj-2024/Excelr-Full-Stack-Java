@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            gap: 10px;
+           
+
+        }
+       
+        .con-1{
+            border: 2px solid green;
+            height: 100%;
+            width: 60%;
+             display: grid;
+            grid-template-columns: repeat(2fr) ;
+            gap: 10px;
+        }
+         .box{
+            border: 2px solid red;
+
+        }
+        .box1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .con-2{
+            border: 2px solid green;
+            width: 40%;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container">
+            <div class="con-1">
+                <div class="box box1">box 1</div>
+                <div class="box box2">box 2</div>
+                <div class="box">box 3</div>
+
+            </div>
+            <div class="con-2">
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
