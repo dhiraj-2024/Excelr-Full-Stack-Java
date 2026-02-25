@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid practice with semintic tags</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainb {
+            margin-top: 200px;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .box {
+            border: 2px solid black;
+        }
+
+        .box1 {
+            grid-row-start: 1;
+        }
+
+        .box2 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .box4 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .box7 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid black;
+            height: 40px;
+            padding: 20px;
+
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: rgb(230, 0, 0);
+        }
+
+        .nav-links ul {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+
+        }
+
+        .nav-links ul li {
+            list-style-type: none;
+            font-size: 17px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        @media (max-width:468px) {
+            .header {
+                background-color: rgb(139, 139, 139);
+            }
+
+            .nav-links ul {
+                /* border: 2px solid green; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 20px;
+                position: relative;
+                top: 80px;
+                right: -170px;
+                display: none;
+            }
+            .nav-links.active ul{
+                display: flex;
+            }
+
+            .btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                Logo
+            </div>
+            <div class="nav-links "  id="links">
+                <ul>
+                    <li>about</li>
+                    <li>home</li>
+                    <li>contact</li>
+                </ul>
+            </div>
+            <div >
+                <button class="btn" id="btn">menu</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="mainb">
+            <div class="box box7">box 7</div>
+            <div class="box box1">box1</div>
+            <div class="box box2">box2</div>
+            <div class="box">box 3</div>
+            <div class="box box4">box 4</div>
+            <div class="box">box 5</div>
+            <div class="box">box 6</div>
+            <div class="box">box 8</div>
+            <div class="box">box 9</div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+
+    <script>
+        const links = document.getElementById("links");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click",()=>{
+            links.classList.toggle("active");
+        })
+
+    </script>
+</body>
+
+</html>
