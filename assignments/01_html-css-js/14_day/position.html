@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 assignment</title>
+    <style>
+        .box{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+        }
+        .container1{
+            border: 2px solid black;
+            height: 400px;
+        }
+        .box1{
+            position:  static;
+        }
+        .box2{
+            position: relative;
+            top: 50px;
+            left: 60px;
+        }
+        .container2{
+            border: 2px solid green;
+            position: relative;
+            height: 400px;
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+        .box3{
+            position: absolute;
+            top: 80px;
+            left: 200px;
+        }
+          .model{
+            border: 2px solid rgb(64, 4, 228);
+            height: 400px;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.519);
+
+           
+        }
+
+        .nav{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid goldenrod;
+            position: fixed;
+            z-index: 10000;
+            background-color: black;
+            color: white;
+            
+        }
+        .nav ul {
+            display: flex;
+            gap: 30px;
+        }
+        .nav ul li{
+            list-style-type: none;
+            font-size: 18px;
+            font-weight: 800;
+            margin-right: 40px;
+        }
+        main{
+            position: absolute;
+            width: 100%;
+            top: 100px;
+        }
+        .button{
+            background-color: blue;
+            color: white;
+            width: 300px;
+            height: 30px;
+            position: fixed;
+            left: 600px;
+            bottom: 20px;
+            z-index: 100000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1>LOGO</h1>
+            <ul>
+                <li>about</li>
+                <li>contact</li>
+                <li>home</li>
+            </ul>
+        </div>
+
+    </header>
+    <main>
+        <div class="container1">
+            <h1>container 1</h1>
+            <div class="box box1">box 1</div>
+            <div class="box box2">box 2</div>
+        </div>
+        <div class="container2">
+            <h1>container 1</h1>
+            <div class="box box3">box 3</div>
+            <div class="box box4">box 4</div>
+            <div class="model"></div>
+        </div>
+        <button type="button" class="button">back to top</button>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
