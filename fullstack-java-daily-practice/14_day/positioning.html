@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css positioning</title>
     <style>
-
-        .container{
+        .container {
             border: 2px solid black;
             height: 3000px;
-            display:flex;
-            padding:10px;
-            gap:10px
-            
+            display: flex;
+            padding: 10px;
+            gap: 10px
         }
-        .box{
+
+        .box {
             border: 2px solid black;
             width: 100px;
             height: 100px;
             background-color: bisque;
 
         }
-      
+
 
         /* .box2{
           position:relative;
@@ -33,16 +33,17 @@
             top:200px;
             left:100px;
         } */
-         .box3{
-            position:absolute;
-            top:50px;
+        .box3 {
+            position: absolute;
+            top: 50px;
             z-index: 10;
 
-         }
-           .box1{
-            z-index:1000;
-        } 
-          /* .box3{
+        }
+
+        .box1 {
+            z-index: 1000;
+        }
+        /* .box3{
             position:fixed;
             top:200px;
             left:300px;
@@ -53,6 +54,7 @@
           } */
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="box box1">box1</div>
@@ -61,14 +63,15 @@
         <div class="box">box4</div>
     </div>
     <div class="container">
-    <h1>container 2</h1>
+        <h1>container 2</h1>
     </div>
     <p>
         <mark>static</mark> <br>
         relative <br>
         absolute <br>
         fixed <br>
-        sticky 
+        sticky
     </p>
 </body>
+
 </html>
