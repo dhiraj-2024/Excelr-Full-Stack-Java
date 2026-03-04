@@ -20,4 +20,17 @@ greet("pandu",askquetion,saybye);
 
 
 
+
+
+function myDisplayer(some) {
+console.log(`this is two numbers sum : ${some}`)
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+
 // callback functions meanse we pass other functions as a parameter in the parent function and execute it 
