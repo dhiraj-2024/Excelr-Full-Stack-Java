@@ -34,3 +34,6 @@ function myCalculator(num1, num2, myCallback) {
 myCalculator(5, 5, myDisplayer);
 
 // callback functions meanse we pass other functions as a parameter in the parent function and execute it 
+
+
+
