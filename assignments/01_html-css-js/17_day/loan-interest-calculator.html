@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="loanAmount">Loan Amount :</label>
+    <input type="number" id="loanAmount" name=" loanAmount" placeholder="Enter your loanAmount name ">
+    <br>
+    <br>
+    <label for="intrestRate">Intrest Rate :</label>
+    <input type="number" id="intrestRate" name=" intrestRate" placeholder="Enter intrestRate ">
+    <br>
+    <br>
+    <label for="time">Time Period :</label>
+    <input type="number" id="time" name=" time" placeholder="Enter time ">
+    <br>
+    <br>
+    <button onclick="interestAmount()">Calculate Interest Amount</button>
+    <h1>Interest Amount :
+        <span id="iamount">
+        </span>
+    </h1>
+    <button onclick="finalAmount()">Calculate Interest Amount</button>
+    <h1>Final Amount :
+        <span id="famount">
+        </span>
+    </h1>
+
+
+    <script>
+        function interestAmount(){
+        let p = Number(document.getElementById("loanAmount").value);
+        let r = Number(document.getElementById("intrestRate").value);
+        let t = Number(document.getElementById("time").value);
+
+        document.getElementById("iamount").innerHTML = (p*r*t)/100;
+        }
+
+        function finalAmount(){
+         let p = Number(document.getElementById("loanAmount").value);
+        let r = Number(document.getElementById("intrestRate").value);
+        let t = Number(document.getElementById("time").value);
+
+        document.getElementById("famount").innerHTML = ((p*t*r)/100) + p;
+        }
+
+    </script>
+</body>
+</html>

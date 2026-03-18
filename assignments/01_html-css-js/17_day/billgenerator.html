@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Generator</title>
+</head>
+<body>
+    
+    <label for="product">Product :</label>
+    <input type="text" id="product" name=" product" placeholder="Enter your product name ">
+    <label for="price">Price :</label>
+    <input type="text" id="price" name=" price" placeholder="Enter price ">
+    <label for="quantity">Quanity :</label>
+    <input type="text" id="quantity" name=" quantity" placeholder="Enter quantity ">
+
+    <button onclick="total()">generate bill</button>
+
+    <h1>Total :
+        <span id="total">
+
+        </span>
+    </h1>
+
+
+
+    <script>
+        function total (){
+            let productName = document.getElementById("product").value ;
+            let quantity = document.getElementById("quantity").value;
+            let price = document.getElementById("price").value;
+
+            let total = price * quantity;
+
+            document.getElementById("total").innerHTML = total;
+        }
+    </script>
+</body>
+</html>

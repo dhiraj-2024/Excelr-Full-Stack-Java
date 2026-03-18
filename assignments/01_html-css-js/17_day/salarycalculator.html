@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary calculator</title>
+</head>
+<body>
+    <h1>Salary calculator </h1>
+
+        <label for="as">Annual Sallary :</label>
+        <input id="as" placeholder="Enter your Anual sallary">
+        <br>
+        <br>
+        <button onclick="calculateSalary()">Calculate Monthly Salary</button>
+        <br>
+        <br>
+        <label for="ms">monthly Salary :</label>
+        <input id="ms" placeholder="Monthly salary">
+
+
+        <script>
+           function calculateSalary (){
+             let asalary = document.getElementById("as").value;
+            let monthlySalary =  asalary/12;
+            document.getElementById("ms").value = monthlySalary;
+           }
+
+        </script>
+</body>
+</html>

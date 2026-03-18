@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>form 2 </h1>
+
+    <label for="fname">First Name :</label>
+    <input type="text" id="fname" placeholder="First Name">
+    <br>
+    <br>
+    <label for="lname">Last Name :</label>
+    <input type="text" id="lname" placeholder="Last Name">
+    <br>
+    <br>
+    <button onclick="getMsg()">Enter</button>
+    <br>
+    <br>
+    <h1 id="demo"></h1>
+
+
+
+
+    <script>
+
+        function getMsg() {
+            let f = document.getElementById("fname").value;
+            let l = document.getElementById("lname").value;
+            let msg = ` welcome back ${f} ${l}  `
+            let news = document.getElementById("demo").innerHTML = msg 
+
+            
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

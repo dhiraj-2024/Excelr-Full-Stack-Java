@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Perform all calculations</h1>
+
+    <label for="fnum">num1 :</label>
+    <input type="number" id="fnum" placeholder="Enter your first number">
+    <br>
+    <br>
+    <label for="snum">num2 :</label>
+    <input type="number" id="snum" placeholder="Enter your second number">
+    <br>
+    <br>
+
+    <!-- <button onclick="addition()">Addition</button>
+    <button onclick="substraction()">Substraction</button>
+    <button onclick="multiplication()">Multiplication</button>
+    <button onclick="division()">Division</button> -->
+
+    <button onclick="cal('add')">Addition</button>
+    <button onclick="cal('sub')">Substraction</button>
+    <button onclick="cal('mult')">Multiplication</button>
+    <button onclick="cal('div')">Division</button>
+
+    <h2>Result : <span id="result"> </span></h2>
+
+
+    <script>
+ 
+ // method 1 
+ /*
+        function addition() {
+            let num1 = Number(document.getElementById("fnum").value);
+            let num2 = Number(document.getElementById("snum").value);
+            let result = num1 + num2;
+            document.getElementById("result").innerText = result;
+        }
+        function substraction() {
+            let num1 = Number(document.getElementById("fnum").value);
+            let num2 = Number(document.getElementById("snum").value);
+            let result = num1 - num2;
+            document.getElementById("result").innerText = result;
+        }
+        function multiplication() {
+            let num1 = Number(document.getElementById("fnum").value);
+            let num2 = Number(document.getElementById("snum").value);
+            let result = num1 * num2;
+            document.getElementById("result").innerText = result;
+        }
+        function division() {
+            let num1 = Number(document.getElementById("fnum").value);
+            let num2 = Number(document.getElementById("snum").value);
+            let result = num1 / num2;
+            document.getElementById("result").innerText = result;
+        }
+
+        */
+
+        function cal(op){
+            let num1 = Number(document.getElementById("fnum").value);
+            let num2 = Number(document.getElementById("snum").value);
+            let result;
+
+            if (op === "add") result = num1 + num2 ;
+            if (op === "sub") result = num1 - num2 ;
+            if (op === "mult") result = num1 * num2 ;
+            if (op === "div") result = num1 / num2 ;
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+    </script>
+</body>
+
+</html>
