@@ -1,4 +1,6 @@
 import React from "react"
+import Nav from "./components/nav"
+import Hero from "./components/hero";
 function App() {
 
   const users = [
@@ -11,6 +13,8 @@ const fruitlist = ['apple', 'banana', 'cherry'];
 
   return (
     <>
+      <Nav />
+      <Hero/>
       <ul>
         {users.map(user => 
           <li key={user.id}>
