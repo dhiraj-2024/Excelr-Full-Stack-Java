@@ -1,6 +1,7 @@
 import React from "react"
 import Nav from "./components/nav"
-import Hero from "./components/hero";
+import { Hero } from "./components/hero";
+import {AllCards} from "./components/allCards"
 function App() {
 
   const users = [
@@ -14,8 +15,11 @@ const fruitlist = ['apple', 'banana', 'cherry'];
   return (
     <>
       <Nav />
-      <Hero/>
-      <ul>
+      <Hero />
+      <AllCards/>
+
+      
+      {/* <ul>
         {users.map(user => 
           <li key={user.id}>
             {user.name} is {user.age} years old
@@ -28,7 +32,7 @@ const fruitlist = ['apple', 'banana', 'cherry'];
             <li key={fruit}> Name : {fruit}</li>
           )
         }
-      </ul>
+      </ul> */}
 
     </>
   )
