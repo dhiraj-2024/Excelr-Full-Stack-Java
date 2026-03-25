@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Learn React Hooks",
+    "description": "Study useState, useEffect, useContext",
+    "priority": "High",
+    "category": "Study",
+    "dueDate": "2026-03-28",
+    "completed": false
+  },
+  {
+    "id": 2,
+    "title": "Build To-Do Project",
+    "description": "Create CRUD functionality with local storage",
+    "priority": "Medium",
+    "category": "Project",
+    "dueDate": "2026-03-30",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "title": "Revise JavaScript",
+    "description": "Closures, promises, async/await",
+    "priority": "High",
+    "category": "Study",
+    "dueDate": "2026-03-26",
+    "completed": true
+  },
+  {
+    "id": 4,
+    "title": "Watch Interview Prep Videos",
+    "description": "Focus on React interview questions",
+    "priority": "Low",
+    "category": "Learning",
+    "dueDate": "2026-03-29",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "title": "Update Resume",
+    "description": "Add latest project and skills",
+    "priority": "Medium",
+    "category": "Career",
+    "dueDate": "2026-03-27",
+    "completed": false
+  },
+  {
+    "id": 6,
+    "title": "Apply for Jobs",
+    "description": "Apply to 5 companies daily",
+    "priority": "High",
+    "category": "Career",
+    "dueDate": "2026-03-31",
+    "completed": false
+  }
+]

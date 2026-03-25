@@ -1,12 +1,12 @@
 import React from 'react'
 
 export const Card = ({element}) => {
-  console.log(element)
+  // console.log(element)
   // const { element } = props;
   const {image,title,genre,rating,watchUrl} = element
     return (
-      <li className=" w-500px ">
-        <img className="" src={image} alt={title} />
+      <li className=' list-none'>
+        <img className="" src={image} alt={title} width="200px" height="300px" />
         <div>
           <h1>Title : {title}</h1>
           <p>Gener : {genre}</p>

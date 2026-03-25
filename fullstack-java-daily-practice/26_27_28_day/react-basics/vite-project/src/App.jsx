@@ -1,24 +1,24 @@
-import React from "react"
-import Nav from "./components/nav"
-import { Hero } from "./components/hero";
-import {AllCards} from "./components/allCards"
+import React from "react";
+import Nav from "./components/nav";
+import { Hero } from "./components/Hero/hero";
+import { AllCards } from "./components/Cards/allCards";
+import { TodoList } from "./components/Todo/todoList";
 function App() {
-
   const users = [
-  { id: 1, name: 'John', age: 30 },
-  { id: 2, name: 'Jane', age: 25 },
-  { id: 3, name: 'Bob', age: 35 }
-];
+    { id: 1, name: "John", age: 30 },
+    { id: 2, name: "Jane", age: 25 },
+    { id: 3, name: "Bob", age: 35 },
+  ];
 
-const fruitlist = ['apple', 'banana', 'cherry'];
+  const fruitlist = ["apple", "banana", "cherry"];
 
   return (
     <>
       <Nav />
       <Hero />
-      <AllCards/>
+      <TodoList />
+      <AllCards />
 
-      
       {/* <ul>
         {users.map(user => 
           <li key={user.id}>
@@ -33,9 +33,8 @@ const fruitlist = ['apple', 'banana', 'cherry'];
           )
         }
       </ul> */}
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
