@@ -3,6 +3,8 @@ import Nav from "./components/nav";
 import { Hero } from "./components/Hero/hero";
 import { AllCards } from "./components/Cards/allCards";
 import { TodoList } from "./components/Todo/todoList";
+import { State } from "./components/State/State";
+import { Toggle } from "./components/State/Toggle";
 function App() {
   const users = [
     { id: 1, name: "John", age: 30 },
@@ -16,6 +18,8 @@ function App() {
     <>
       <Nav />
       <Hero />
+      <Toggle/>
+      <State/>
       <TodoList />
       <AllCards />
 
