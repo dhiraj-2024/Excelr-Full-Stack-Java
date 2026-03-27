@@ -13,7 +13,7 @@ export const Card = ({element}) => {
           <p>Ratings : {rating}</p>
                 <a href={watchUrl}
                 target='_blank'>
-                    <button>watch now</button>
+                    <button className='border-2 p-2 bg-red-500 rounded-[10px] text-white font-bold cursor-pointer' >watch now</button>
                 </a>
         </div>
       </li>

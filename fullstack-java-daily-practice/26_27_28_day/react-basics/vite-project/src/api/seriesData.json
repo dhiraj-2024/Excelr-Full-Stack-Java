@@ -31,14 +31,7 @@
     "image": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
     "watchUrl": "https://www.youtube.com/watch?v=HhesaQXLuRY"
   },
-  {
-    "id": 5,
-    "title": "Dark",
-    "genre": "Sci-Fi, Mystery",
-    "rating": "8.8",
-    "image": "https://image.tmdb.org/t/p/w500/5Lo5gR4s7Xqkz7eGukjxdX3a7QK.jpg",
-    "watchUrl": "https://www.youtube.com/watch?v=rrwycJ08PSA"
-  },
+
   {
     "id": 6,
     "title": "Squid Game",

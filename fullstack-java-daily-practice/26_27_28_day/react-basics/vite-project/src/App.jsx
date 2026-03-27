@@ -5,6 +5,8 @@ import { AllCards } from "./components/Cards/allCards";
 import { TodoList } from "./components/Todo/todoList";
 import { State } from "./components/State/State";
 import { Toggle } from "./components/State/Toggle";
+import { User } from "./components/Props/User";
+import { DisplyForm } from "./components/Form/DisplyForm";
 function App() {
   const users = [
     { id: 1, name: "John", age: 30 },
@@ -18,8 +20,14 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <Toggle/>
-      <State/>
+      <DisplyForm/>
+      {/* <User name="Satuu" /> */}
+      {/* <User name="dhiraj" />
+      <User color = "blue">
+        <h1>Are bhai tereko kuch samajta ki nahi kya me samjau tereko padhai karta ki nahi tu bol meko </h1>
+      </User> */}
+      <Toggle />
+      <State />
       <TodoList />
       <AllCards />
 

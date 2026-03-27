@@ -10,7 +10,7 @@ export const TodoCard = ({bhai}) => {
         
     // }
   return (
-    <div className=" border-2 border-black w-[450px] h-[220px] p-4 bg-[#b8b8b8]">
+    <div className=" border-2 border-black w-[450px] h-[220px] p-4 bg-gradient-to-r from-purple-200 to-yellow-100">
       <li key={id} className=" list-none  ">
         <h1 className="text-2xl font-bold  ">{title}</h1>
         <p>{description}</p>
