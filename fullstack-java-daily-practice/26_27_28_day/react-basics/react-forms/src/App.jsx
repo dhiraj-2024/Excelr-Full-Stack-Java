@@ -5,6 +5,7 @@ import { Form2Multiform } from "./components/Forms/Form2Multiform"
 import { Form3Validation } from "./components/Forms/Form3.Validation"
 import Nav from "./components/Header/Nav"
 import { Table } from "./components/Table/Table"
+import { College } from "./components/ArrayLooping/College"
 
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
   return (
     <>
       <Nav />
+      <hr />
+
+        <College />
+      <hr />
+
       <select name="color" id="color" onChange={(e)=>{setColor(e.target.value)}}>
         <option value={"red"}>Red</option>
         <option value={"orange"}>Orange</option>

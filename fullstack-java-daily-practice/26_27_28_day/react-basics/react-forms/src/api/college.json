@@ -1,0 +1,149 @@
+[
+    {
+  "collegeName": "ABC Engineering College",
+  "departments": [
+    {
+      "name": "Computer Science",
+      "hod": "Dr. Mehta",
+      "students": [
+        { "id": 1, "name": "Rahul", "marks": 80 },
+        { "id": 2, "name": "Anjali", "marks": 88 }
+      ]
+    },
+    {
+      "name": "Mechanical",
+      "hod": "Dr. Sharma",
+      "students": [
+        { "id": 3, "name": "Rohit", "marks": 72 },
+        { "id": 4, "name": "Pooja", "marks": 90 }
+      ]
+    }
+  ]
+},
+{
+  "collegeName": "XYZ Institute of Technology",
+  "departments": [
+    {
+      "name": "Civil",
+      "hod": "Dr. Patil",
+      "students": [
+        { "id": 5, "name": "Amit", "marks": 65 },
+        { "id": 6, "name": "Sneha", "marks": 78 }
+      ]
+    },
+    {
+      "name": "Electrical",
+      "hod": "Dr. Joshi",
+      "students": [
+        { "id": 7, "name": "Karan", "marks": 82 },
+        { "id": 8, "name": "Neha", "marks": 87 }
+      ]
+    }
+  ]
+},
+{
+  "collegeName": "National Engineering College",
+  "departments": [
+    {
+      "name": "Information Technology",
+      "hod": "Dr. Verma",
+      "students": [
+        { "id": 9, "name": "Vikas", "marks": 75 },
+        { "id": 10, "name": "Ritika", "marks": 92 }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "hod": "Dr. Singh",
+      "students": [
+        { "id": 11, "name": "Arjun", "marks": 69 },
+        { "id": 12, "name": "Priya", "marks": 85 }
+      ]
+    }
+  ]
+},
+{
+  "collegeName": "Modern Tech University",
+  "departments": [
+    {
+      "name": "Computer Science",
+      "hod": "Dr. Kulkarni",
+      "students": [
+        { "id": 13, "name": "Aditya", "marks": 88 },
+        { "id": 14, "name": "Sakshi", "marks": 91 }
+      ]
+    },
+    {
+      "name": "Mechanical",
+      "hod": "Dr. Deshmukh",
+      "students": [
+        { "id": 15, "name": "Nikhil", "marks": 70 },
+        { "id": 16, "name": "Tanvi", "marks": 83 }
+      ]
+    }
+  ]
+},
+{
+  "collegeName": "Global Engineering Institute",
+  "departments": [
+    {
+      "name": "Civil",
+      "hod": "Dr. Rao",
+      "students": [
+        { "id": 17, "name": "Manoj", "marks": 68 },
+        { "id": 18, "name": "Kavita", "marks": 79 }
+      ]
+    },
+    {
+      "name": "Electrical",
+      "hod": "Dr. Nair",
+      "students": [
+        { "id": 19, "name": "Suresh", "marks": 84 },
+        { "id": 20, "name": "Deepa", "marks": 89 }
+      ]
+    }
+  ]
+},
+{
+  "collegeName": "Tech Valley College",
+  "departments": [
+    {
+      "name": "Information Technology",
+      "hod": "Dr. Gupta",
+      "students": [
+        { "id": 21, "name": "Ravi", "marks": 77 },
+        { "id": 22, "name": "Meena", "marks": 93 }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "hod": "Dr. Iyer",
+      "students": [
+        { "id": 23, "name": "Ankit", "marks": 71 },
+        { "id": 24, "name": "Divya", "marks": 86 }
+      ]
+    }
+  ]
+},
+{
+  "collegeName": "Tech Valley College",
+  "departments": [
+    {
+      "name": "Information Technology",
+      "hod": "Dr. Gupta",
+      "students": [
+        { "id": 21, "name": "Ravi", "marks": 77 },
+        { "id": 22, "name": "Meena", "marks": 93 }
+      ]
+    },
+    {
+      "name": "Electronics",
+      "hod": "Dr. Iyer",
+      "students": [
+        { "id": 23, "name": "Ankit", "marks": 71 },
+        { "id": 24, "name": "Divya", "marks": 86 }
+      ]
+    }
+  ]
+}
+]
