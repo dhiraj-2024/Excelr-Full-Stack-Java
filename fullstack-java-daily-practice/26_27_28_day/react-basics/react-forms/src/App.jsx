@@ -6,6 +6,7 @@ import { Form3Validation } from "./components/Forms/Form3.Validation"
 import Nav from "./components/Header/Nav"
 import { Table } from "./components/Table/Table"
 import { College } from "./components/ArrayLooping/College"
+import { UseEfeect } from "./Hooks/UseEfeect"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Nav />
+      <UseEfeect/>
       <hr />
 
         <College />

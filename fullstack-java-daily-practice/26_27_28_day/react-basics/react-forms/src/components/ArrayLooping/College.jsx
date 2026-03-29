@@ -1,5 +1,5 @@
 import React from 'react'
- import college from '../../api/college.json'
+import college from '../../api/college.json'
 import { CollegeCard } from './Clg-card'
 import { Department } from './Department'
 import { Student } from './Student'
