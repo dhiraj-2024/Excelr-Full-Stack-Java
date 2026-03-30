@@ -1,6 +1,6 @@
 import React from "react";
 import task from "../../api/todoData.json";
-import { TodoCard } from "../Todo/todoCard";
+import { TodoCard } from "./todoCard";
 
 export const TodoList = () => {
   return (
