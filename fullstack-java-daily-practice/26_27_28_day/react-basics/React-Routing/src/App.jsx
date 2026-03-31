@@ -27,7 +27,7 @@ function App() {
         <Route path="student" element={<Student/>} />
         <Route path="department" element={<Department/>} />
         </Route>
-      {/* <Route path="*" element={<h1>page not found</h1>} /> */}
+      <Route path="*" element={<h1>page not found</h1>} />
       <Route path="/*" element={<h1>page not found</h1>} />
       </Routes>
 
