@@ -1,7 +1,10 @@
 import React from 'react'
+import { Navbar } from '../components/Navbar'
 
 export const News = () => {
   return (
-    <div>News</div>
+    <div>
+      <Navbar />
+      News</div>
   )
 }

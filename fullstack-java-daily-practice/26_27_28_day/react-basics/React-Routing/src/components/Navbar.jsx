@@ -33,6 +33,12 @@ export const Navbar = () => {
             name: "News",
             path: "/news",
         },
+        {
+            id: 5,
+            icon: <LuNewspaper />,
+            name: "College",
+            path:"/college",
+        }
     ];
 
   return (
