@@ -37,28 +37,28 @@ export const Navbar = () => {
             id: 5,
             icon: <LuNewspaper />,
             name: "College",
-            path:"/college",
+            path: "/college",
         }
     ];
 
-  return (
-      <div className='flex justify-between p-4 border-1'>
-          <div>
-              Logo
-          </div>
-          <div>
-              <ul className='flex justify-center gap-4 '>
-                  {
-                      NavList.map((item) => (
-                          <Link key={item.id} to={item.path} >
-                              <li  className='flex justify-center align-center gap-2  cursor-pointer'>
-                                  <span>{item.icon}</span> {item.name}
-                              </li>
-                          </Link>
-                      ))
-                  }
-            </ul>
-          </div>
-    </div>
-  )
+    return (
+        <div className='flex justify-between p-4 border-1'>
+            <div>
+                Logo
+            </div>
+            <div>
+                <ul className='flex justify-center gap-4 '>
+                    {
+                        NavList.map((item) => (
+                            <Link key={item.id} to={item.path} >
+                                <li className='flex justify-center align-center gap-2  cursor-pointer'>
+                                    <span>{item.icon}</span> {item.name}
+                                </li>
+                            </Link>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    )
 }
