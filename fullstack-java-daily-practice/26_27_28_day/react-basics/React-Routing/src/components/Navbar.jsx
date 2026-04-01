@@ -38,11 +38,17 @@ export const Navbar = () => {
             icon: <LuNewspaper />,
             name: "College",
             path: "/college",
+        },
+        {
+            id: 5,
+            icon: <LuNewspaper />,
+            name: "Users",
+            path: "/users",
         }
     ];
 
     return (
-        <div className='flex justify-between p-4 border-1'>
+        <div className='flex justify-between p-4 border'>
             <div>
                 Logo
             </div>

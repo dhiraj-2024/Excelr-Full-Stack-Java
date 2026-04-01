@@ -7,10 +7,13 @@ import { Navbar } from "./components/Navbar"
 import { College } from "./pages/College"
 import { Student } from "./pages/Student"
 import { Department } from "./pages/Department"
+import { Users } from "./pages/Users"
+import { UserDetails } from "./pages/UserDetails"
 
 
 function App() {
 
+ 
 
   return (
 
@@ -20,6 +23,8 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/news" element={<News />} />
+      <Route path="/users" element={<Users />} />
+      <Route path="/users/:id" element={<UserDetails/>} />
       {/* dynamic routing  */}
       <Route path="/college" element={<College />}>
         <Route index element={<Student />} />
