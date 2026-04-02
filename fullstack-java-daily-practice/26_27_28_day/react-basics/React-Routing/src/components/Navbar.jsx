@@ -40,10 +40,16 @@ export const Navbar = () => {
             path: "/college",
         },
         {
-            id: 5,
+            id: 6,
             icon: <LuNewspaper />,
             name: "Users",
             path: "/users",
+        },
+        {
+            id: 7,
+            icon: <LuNewspaper />,
+            name: "List",
+            path: "/users/list",
         }
     ];
 
@@ -56,8 +62,8 @@ export const Navbar = () => {
                 <ul className='flex justify-center gap-4 '>
                     {
                         NavList.map((item) => (
-                            <Link key={item.id} to={item.path} >
-                                <li className='flex justify-center align-center gap-2  cursor-pointer'>
+                            <Link  to={item.path} >
+                                <li key={item.id} className='flex justify-center align-center gap-2  cursor-pointer'>
                                     <span>{item.icon}</span> {item.name}
                                 </li>
                             </Link>

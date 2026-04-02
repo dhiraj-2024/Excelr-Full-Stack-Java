@@ -23,8 +23,9 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/news" element={<News />} />
-      <Route path="/users" element={<Users />} />
-      <Route path="/users/:id" element={<UserDetails/>} />
+      {/* optional segmentation routing */}
+      <Route path="/users/list?" element={<Users />} /> 
+      <Route path="/users/:id/:name?" element={<UserDetails/>} />
       {/* dynamic routing  */}
       <Route path="/college" element={<College />}>
         <Route index element={<Student />} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { Navbar } from '../components/Navbar'
 
 export const Users = () => {
 
@@ -12,16 +13,20 @@ export const Users = () => {
     ]
 
     return (
-        <div>
-            {
-                userList.map((item,index) => {
-                    return (
-                        <li key={index}>
-                            <Link to={"/users/" + item.id}>{item.name}</Link>
-                        </li>
-                    )
-                })
-            }
-        </div>
+        <>
+            <Navbar />
+            <div className='p-10'>
+                <h1 className='font-bold text-[30px]'>User List page</h1>
+                {
+                    userList.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <Link to={"/users/" + item.id +"/"+ item.name}>{item.name}</Link>
+                            </li>
+                        )
+                    })
+                }
+            </div>
+        </>
     )
 }
