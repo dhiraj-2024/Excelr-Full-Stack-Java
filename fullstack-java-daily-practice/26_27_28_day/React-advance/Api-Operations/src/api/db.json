@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "4",
+      "title": "wait title",
+      "views": 2030
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "dhiraj rajput",
+      "age": 22,
+      "city": "phulambri"
+    },
+    {
+      "id": "2",
+      "name": "pooja rajput",
+      "age": 20,
+      "city": "nashik"
+    },
+    {
+      "id": "3",
+      "name": "karan maher",
+      "age": 21,
+      "city": "sambhajinagar"
+    },
+    {
+      "id": "4",
+      "name": "pramod dwarkunde",
+      "age": 21,
+      "city": "pune"
+    },
+    {
+      "name": "pandu",
+      "age": "18",
+      "city": "pandu city",
+      "id": "Qf92w0LOQJM"
+    },
+    {
+      "name": "Nashik's Team",
+      "age": "11",
+      "city": "mumbai",
+      "id": "9nHMbjHo9gI"
+    },
+    {
+      "name": "param ",
+      "age": "19",
+      "city": "gurgaon",
+      "id": "BC0MG54iBRk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
