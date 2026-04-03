@@ -6,6 +6,7 @@ import {UserData} from './pages/UserData'
 import { Route,Routes } from "react-router";
 import { Home } from "./pages/Home";
 import { UserAdd } from "./pages/UserAdd";
+import { EditUser } from "./pages/EditUser";
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="dummy-data" element={<DummyDataUser />} />
         <Route path="users" element={<UserData />} />
         <Route path="add" element={<UserAdd/>} />
+        <Route path="edit/:id" element={<EditUser/>} />
       </Routes>
     </>
 )

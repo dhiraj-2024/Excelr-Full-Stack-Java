@@ -25,19 +25,13 @@
     {
       "id": "1",
       "name": "dhiraj rajput",
-      "age": 22,
+      "age": "23",
       "city": "phulambri"
-    },
-    {
-      "id": "2",
-      "name": "pooja rajput",
-      "age": 20,
-      "city": "nashik"
     },
     {
       "id": "3",
       "name": "karan maher",
-      "age": 21,
+      "age": "24",
       "city": "sambhajinagar"
     },
     {
@@ -47,22 +41,10 @@
       "city": "pune"
     },
     {
-      "name": "pandu",
-      "age": "18",
-      "city": "pandu city",
-      "id": "Qf92w0LOQJM"
-    },
-    {
-      "name": "Nashik's Team",
-      "age": "11",
-      "city": "mumbai",
-      "id": "9nHMbjHo9gI"
-    },
-    {
       "name": "param ",
-      "age": "19",
-      "city": "gurgaon",
-      "id": "BC0MG54iBRk"
+      "age": "20",
+      "city": "Nagar",
+      "id": "Rh-2qVfcIcM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
