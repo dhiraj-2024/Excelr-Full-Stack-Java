@@ -1,5 +1,25 @@
+instence member variable and function 
+static and non static
+
+inheritance (single , multilevel , hybrid)
+
 this keyword 
 super keyword 
 polymorphism
 function overloading
 function overRiding
+abstract class 
+interface -  variables (public, static, final). function (abstract , public)
+interface to interface (extends)
+class to interface (implements)
+
+
+
+
+
+
+QUETIONS : 
+why multiple inheritance remove from the java ? - ambiguity confusion 
+how to achive multiple inheritance in java ? - usin interface override the function 
+what happen when we make cunstructor private of a class ? - restrict user to create object this perticuler class
+can we overloading main method ?
