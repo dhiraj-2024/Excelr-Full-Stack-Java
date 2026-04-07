@@ -16,6 +16,12 @@ class AnotherDog extends Dog {
     }
 }
 
+// class k extends Animal {
+
+//     public static void main() {
+//         System.out.println("overriding function of main class");
+//     }
+// }
 public class Animal {
 
     public static void main(String[] args) {
@@ -26,6 +32,11 @@ public class Animal {
         AnotherDog d2 = new AnotherDog();
         System.out.println(d2.name);
         d2.fun1();
+
+        // k ob = new k();
+        // ob.main();
     }
-    
+
 }
+
+

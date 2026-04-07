@@ -6,10 +6,12 @@ inheritance (single , multilevel , hybrid)
 this keyword 
 super keyword 
 polymorphism
-function overloading
-function overRiding
-abstract class 
-interface -  variables (public, static, final). function (abstract , public)
+function overloading - same method name with diffrent parameters
+function overRiding - same method name same parameter but decleration in diffrent class
+abstract class  - no object create , provide set of rules to child class
+interface - 
+ variables (public, static, final) - static variable inherits possible , overriding also possible
+  . function (abstract , public) - we can define static function body , static function not inherits , overriding possible 
 interface to interface (extends)
 class to interface (implements)
 
