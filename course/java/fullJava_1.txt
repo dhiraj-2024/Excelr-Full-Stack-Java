@@ -1,0 +1,22 @@
+c/cpp 
+sourcecode - set of rules - compiler - machine code / binary 
+platform dependent - generate each time diffrent binery code for each machine like mac . windows , linux 
+
+because each system have diffrent processor - ISA and os these have different transister so it generate everytime new binery code for diffrent machines 
+
+issues : 
+portability, security , simple
+
+
+
+java 👍
+PORTABILITY : 
+sourcecode .java -> compiler -> bytecode .class -> [ (JVM) -> any platform (windows , linux , mac)].
+
+SECURITY : 
+jvm provide secure environment to run the bytecode and restrict unnecessary permissions 
+
+SIMPLICITY : 
+write ones , runs everyweher : used in backnd (servelate) : frontend (applate) 
+
+
