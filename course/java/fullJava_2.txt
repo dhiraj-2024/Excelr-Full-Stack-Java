@@ -1,0 +1,45 @@
+COMPILER : complete code at one time comple
+source code -> Machine code -> System(CPU) -> output
+
+INTERPRETER :  compile line by line
+source code -> Machine code (line by line ) -> System(CPU) -> output
+
+
+JAVA : 
+
+not complied not interpreter it usage both things : 
+
+code -> compiler -> byte code -> JVM (Interpreter + JIT (just in time) compiler ) -> Machine code -> output
+
+
+
+1. JRE :  java runtime environment
+
+JVM + Class Libraries 
+
+
+2. JDK :  java development kit
+
+[JRE(JVM)]  + Compiler & Debugger 
+
+
+3. JVM :  java virtual machine
+
+a. byte code -> JIT -> (frequent code ) -> convert machine code 
+          -> Interpreter -> (less imp code) -> convert machine code
+
+b. Security : provide secure env ( sandbox )
+
+c. Garbage collection 
+
+
+
+
+Java addditions : 
+
+JSE: java standard eddition   =>>>> CORE JAVA
+JEE: java Enterprise eddition(JAKARTA EE) =>>>> WEBAPLICATION 
+JME: java micro edditon (outdated) =>>>> LIGHTWEIGHT EDDITION OF JAVA =>>> replace with android
+
+
+
