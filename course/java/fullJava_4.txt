@@ -1,0 +1,461 @@
+==============================
+HOW NUMBERS ARE STORED IN JAVA
+==============================
+
+1) POSITIVE NUMBERS
+-------------------
+
+Example:
+byte num = 10;
+
+Step 1: Convert to Binary
+Decimal: 10
+
+ 16   8   4   2   1
+  0   1   0   1   0   → 1010
+
+Step 2: Store in 8-bit (byte)
+
+00001010
+
+MSB = 0 → Positive number
+Stored directly in binary form
+
+
+2) NEGATIVE NUMBERS (2's COMPLEMENT)
+------------------------------------
+
+Example:
+byte num = -10;
+
+Step A: Convert +10 to 8-bit binary
+
+00001010
+
+Step B: Take 1's Complement (flip bits)
+
+00001010  →  11110101
+
+Step C: Add 1 (2's Complement)
+
+  11110101
++        1
+-----------
+  11110110
+
+Final Stored Value:
+
+11110110
+
+MSB = 1 → Negative number
+
+
+=====================================
+HOW COMPUTER SHOWS OUTPUT (IMPORTANT)
+=====================================
+
+Example:
+byte num = -10;
+
+Stored in memory:
+11110110   (binary form)
+
+When we print:
+System.out.println(num);
+
+Step 1: JVM checks MSB (Most Significant Bit)
+- MSB = 1 → Number is NEGATIVE
+
+Step 2: Convert back using 2's complement
+
+Take stored value:
+11110110
+
+(A) Take 1's complement (flip bits)
+11110110 → 00001001
+
+(B) Add 1
+00001001
++       1
+---------
+00001010
+
+Step 3: Convert binary to decimal
+
+00001010 → 10
+
+Step 4: Apply negative sign
+
+Final Output = -10
+
+
+=====================================
+IMPORTANT RULES (VERY IMPORTANT)
+=====================================
+
+1. Java uses 2's complement for negative numbers
+
+2. Steps for negative numbers:
+   - Convert number to binary
+   - Take 1's complement
+   - Add 1
+
+3. MSB (Most Significant Bit):
+   - 0 → Positive number
+   - 1 → Negative number
+
+4. Byte = 8 bits
+   Always store values in full 8-bit format
+
+
+=====================================
+QUICK REVISION
+=====================================
+
++10 → 00001010
+-10 → 11110110
+
+Print Process:
+Binary → Check MSB → Reverse 2's complement → Decimal
+
+Positive → Direct binary
+Negative → Convert back using 2's complement
+
+
+=====================================
+BONUS (CONCEPT)
+=====================================
+
+Why 2's complement?
+- Easy for CPU calculations
+- Only one representation of zero
+- Efficient for addition & subtraction
+
+=====================================
+
+
+
+
+
+
+
+************************************************************************************************************
+
+
+=====================================
+HOW DECIMAL (FLOAT) NUMBERS ARE STORED IN JAVA MEMORY
+=====================================
+
+NOTE:
+float = 32 bits 
+
+-------------------------------------
+STRUCTURE OF FLOAT (32 BITS)
+-------------------------------------
+
+| Sign (1 bit) | Exponent (8 bits) | Mantissa (23 bits) |
+
+-------------------------------------
+EXAMPLE:
+float num = 10.02f;
+-------------------------------------
+
+
+=====================================
+STEP 1: CONVERT INTEGER PART (10)
+=====================================
+
+10 ÷ 2 → remainder
+10 / 2 = 5  r0
+5  / 2 = 2  r1
+2  / 2 = 1  r0
+1  / 2 = 0  r1
+
+Write reverse → 1010
+
+So,
+10 (decimal) = 1010 (binary)
+
+
+=====================================
+STEP 2: CONVERT FRACTION PART (.02)
+=====================================
+
+Multiply by 2 repeatedly:
+
+0.02 × 2 = 0.04 → 0
+0.04 × 2 = 0.08 → 0
+0.08 × 2 = 0.16 → 0
+0.16 × 2 = 0.32 → 0
+0.32 × 2 = 0.64 → 0
+0.64 × 2 = 1.28 → 1
+0.28 × 2 = 0.56 → 0
+0.56 × 2 = 1.12 → 1
+0.12 × 2 = 0.24 → 0
+0.24 × 2 = 0.48 → 0
+...
+
+So,
+0.02 ≈ 0.00000101... (approx, repeating)
+
+-------------------------------------
+COMBINED BINARY
+-------------------------------------
+
+10.02 ≈ 1010.00000101...
+
+
+=====================================
+STEP 3: NORMALIZATION
+=====================================
+
+Move decimal point to form:
+
+1.xxxxx × 2^n
+
+1010.00000101 →
+
+= 1.0100000101 × 2^3
+
+Exponent = 3
+
+
+=====================================
+STEP 4: SIGN BIT
+=====================================
+
+Number is positive → Sign = 0
+
+
+=====================================
+STEP 5: EXPONENT (BIAS METHOD)
+=====================================
+
+Bias for float = 127
+
+Exponent = 3
+
+Stored exponent = 3 + 127 = 130
+
+Convert 130 to binary:
+
+130 ÷ 2 → 10000010
+
+Exponent bits = 10000010
+
+
+=====================================
+STEP 6: MANTISSA
+=====================================
+
+Take digits after decimal (remove leading 1):
+
+1.0100000101 →
+
+Mantissa = 0100000101...
+
+Fill up to 23 bits:
+
+01000001010000000000000
+
+
+=====================================
+FINAL 32-BIT REPRESENTATION
+=====================================
+
+Sign     Exponent       Mantissa
+ 0     10000010     01000001010000000000000
+
+
+=====================================
+HOW COMPUTER PRINTS FLOAT VALUE
+=====================================
+
+Stored binary:
+
+0 10000010 01000001010000000000000
+
+-------------------------------------
+STEP 1: CHECK SIGN
+-------------------------------------
+0 → Positive number
+
+-------------------------------------
+STEP 2: FIND EXPONENT
+-------------------------------------
+
+10000010 = 130
+
+Actual exponent = 130 - 127 = 3
+
+-------------------------------------
+STEP 3: REBUILD NUMBER
+-------------------------------------
+
+Mantissa:
+
+1.0100000101...
+
+Now:
+
+= 1.0100000101 × 2^3
+
+-------------------------------------
+STEP 4: CONVERT TO DECIMAL
+-------------------------------------
+
+1.0100000101 × 2^3
+
+= 1010.00000101...
+
+≈ 10.02 (approx value)
+
+-------------------------------------
+FINAL OUTPUT
+-------------------------------------
+
+System.out.println(num);
+
+Output:
+10.02   (approx, may vary slightly)
+
+
+=====================================
+IMPORTANT POINTS (VERY IMPORTANT)
+=====================================
+
+1. Floating numbers are NOT exact
+   → Stored as approximation
+
+2. IEEE 754 is used
+
+3. Bias for float = 127
+
+4. Precision limited to 23 bits
+
+5. That’s why:
+   0.1 + 0.2 ≠ 0.3 exactly
+
+
+=====================================
+QUICK REVISION
+=====================================
+
+Decimal → Binary → Normalize → Add Bias → Store
+
+Print:
+Binary → Remove Bias → Rebuild → Decimal
+
+=====================   
+
+********************************************************************************************************
+
+=====================================
+HOW DOUBLE NUMBERS ARE STORED IN JAVA MEMORY
+=====================================
+
+NOTE:
+double = 64 bits (IEEE 754 format)
+
+-------------------------------------
+STRUCTURE OF DOUBLE (64 BITS)
+-------------------------------------
+
+| Sign (1 bit) | Exponent (11 bits) | Mantissa (52 bits) |
+
+
+-------------------------------------
+EXAMPLE:
+double num = 10.02;
+-------------------------------------
+
+
+=====================================
+KEY DIFFERENCE FROM FLOAT
+=====================================
+
+float  → 32 bits → bias = 127 → less precision  
+double → 64 bits → bias = 1023 → high precision  
+
+
+=====================================
+STORAGE PROCESS (SHORT)
+=====================================
+
+1. Convert number to binary (same as float)
+
+10.02 ≈ 1010.00000101...
+
+2. Normalize:
+
+= 1.0100000101 × 2^3
+
+3. Sign bit:
+0 (positive number)
+
+4. Exponent (with bias):
+
+Exponent = 3  
+Bias = 1023  
+
+Stored exponent = 3 + 1023 = 1026  
+
+1026 (binary) = 10000000010
+
+
+5. Mantissa:
+
+Take digits after decimal:
+
+0100000101...
+
+Fill up to 52 bits:
+
+0100000101000000000000000000000000000000000000000000
+
+
+=====================================
+FINAL 64-BIT REPRESENTATION
+=====================================
+
+Sign   Exponent (11 bit)      Mantissa (52 bit)
+
+ 0     10000000010     0100000101000000000000000000000000000000000000000000
+
+
+=====================================
+HOW OUTPUT IS GENERATED
+=====================================
+
+1. Check Sign → 0 → Positive  
+
+2. Remove bias:
+1026 - 1023 = 3  
+
+3. Rebuild:
+1.0100000101 × 2^3  
+
+4. Convert to decimal:
+≈ 10.02 (more accurate than float)
+
+
+=====================================
+IMPORTANT POINTS
+=====================================
+
+1. double has higher precision than float  
+2. Default type for decimal numbers in Java  
+3. Less rounding error compared to float  
+4. Still not 100% exact (approximation exists)  
+
+
+=====================================
+QUICK SUMMARY
+=====================================
+
+float  → 32 bit → bias 127  
+double → 64 bit → bias 1023  
+
+More bits = More precision
+
+=====================================
