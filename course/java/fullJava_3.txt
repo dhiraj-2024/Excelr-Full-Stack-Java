@@ -58,7 +58,7 @@ it goes to the unicode or ascii find these perticular charecter assign integer v
 
 true , false 
 
-eg : boolean state = true ;
+eg : boolean state = true;
 
 
 
