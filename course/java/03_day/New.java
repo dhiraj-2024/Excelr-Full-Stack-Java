@@ -11,8 +11,8 @@ static void multiplication(int c){
 
 public class New  {
     public static void main(String[] argu){
-        methodss obj = new methodss();
-        obj.addition(3,5);
-        obj.multiplication(3);
+
+        methodss.addition(3,5);
+        methodss.multiplication(3);
     }
 };

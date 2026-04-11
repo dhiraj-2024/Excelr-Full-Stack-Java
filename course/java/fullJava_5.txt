@@ -1,0 +1,277 @@
+=====================================
+TYPE CONVERSION / TYPE CASTING IN JAVA
+=====================================
+
+Definition:
+Type conversion means converting one data type into another.
+
+-------------------------------------
+TYPES OF TYPE CONVERSION
+-------------------------------------
+
+1) IMPLICIT TYPE CONVERSION (WIDENING)
+2) EXPLICIT TYPE CONVERSION (NARROWING)
+3) TRUNCATION (SPECIAL CASE)
+4) BOOLEAN CONVERSION (NOT ALLOWED)
+5) TYPE PROMOTION (AUTOMATIC IN EXPRESSIONS)
+
+
+=====================================
+1) IMPLICIT TYPE CONVERSION (WIDENING)
+=====================================
+
+Definition:
+Conversion done automatically by Java when:
+Source type < Destination type
+
+(byte → short → int → long → float → double)
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+byte a = 10;
+int b = a;
+
+System.out.println(b);  // 10
+
+-------------------------------------
+UNDERSTANDING
+-------------------------------------
+
+byte = 8 bit
+int  = 32 bit
+
+Small container → Big container
+So Java safely converts automatically
+
+-------------------------------------
+IMPORTANT RULE
+-------------------------------------
+
+✔ No data loss  
+✔ Done automatically  
+✔ Always safe  
+
+-------------------------------------
+INVALID CASE
+-------------------------------------
+
+int x = 100;
+byte y = x;   // ERROR
+
+Reason:
+Big → Small (data loss possible)
+
+
+=====================================
+2) EXPLICIT TYPE CONVERSION (NARROWING)
+=====================================
+
+Definition:
+Manual conversion using casting when:
+Source type > Destination type
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int c = 300;
+
+// byte d = c;  // ERROR
+
+byte d = (byte) c;
+System.out.println(d);
+
+-------------------------------------
+OUTPUT
+-------------------------------------
+
+44
+
+-------------------------------------
+WHY 44?
+-------------------------------------
+
+300 in binary → exceeds byte range (-128 to 127)
+
+Only last 8 bits stored → result changes
+
+-------------------------------------
+UNDERSTANDING
+-------------------------------------
+
+Big container → Small container  
+Data loss possible → so manual casting required
+
+-------------------------------------
+IMPORTANT RULE
+-------------------------------------
+
+✔ Requires casting (type)  
+✔ Data loss may happen  
+✔ Risky conversion  
+
+
+=====================================
+3) TRUNCATION (FLOAT → INT)
+=====================================
+
+Definition:
+When decimal part is removed during conversion
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+float b = 23.45f;
+
+// int c = b;  // ERROR
+
+int c = (int) b;
+
+System.out.println(c);
+
+-------------------------------------
+OUTPUT
+-------------------------------------
+
+23
+
+-------------------------------------
+UNDERSTANDING
+-------------------------------------
+
+23.45 → 23
+
+Decimal part (.45) is removed (NOT rounded)
+
+-------------------------------------
+IMPORTANT POINT
+-------------------------------------
+
+✔ Only integer part kept  
+✔ Decimal part lost  
+
+
+=====================================
+4) BOOLEAN CONVERSION
+=====================================
+
+❌ NOT POSSIBLE IN JAVA
+
+-------------------------------------
+INVALID EXAMPLES
+-------------------------------------
+
+int a = 1;
+boolean b = a;    // ERROR
+
+boolean x = true;
+int y = x;        // ERROR
+
+-------------------------------------
+RULE
+-------------------------------------
+
+✔ boolean can ONLY be true or false  
+✔ Cannot convert to/from numeric types  
+
+
+=====================================
+5) TYPE PROMOTION (VERY IMPORTANT)
+=====================================
+
+Definition:
+Automatic conversion of smaller types to bigger types
+during expressions
+
+-------------------------------------
+RULES
+-------------------------------------
+
+1. byte, short, char → converted to int  
+2. If one operand is bigger → result becomes bigger type  
+3. Expression result type = highest data type present  
+
+-------------------------------------
+EXAMPLES
+-------------------------------------
+
+byte a = 10;
+byte b = 20;
+
+// byte c = a + b;  // ERROR
+
+int c = a + b;
+
+-------------------------------------
+WHY?
+-------------------------------------
+
+a + b → both promoted to int
+
+-------------------------------------
+ANOTHER EXAMPLE
+-------------------------------------
+
+int x = 10;
+double y = 20.5;
+
+double result = x + y;
+
+System.out.println(result);
+
+OUTPUT:
+30.5
+
+-------------------------------------
+UNDERSTANDING
+-------------------------------------
+
+int + double → double
+
+-------------------------------------
+CHAR EXAMPLE
+-------------------------------------
+
+char ch1 = 'A';   // ASCII 65
+char ch2 = 'B';   // ASCII 66
+
+int result = ch1 + ch2;
+
+System.out.println(result);
+
+OUTPUT:
+131
+
+-------------------------------------
+IMPORTANT POINTS
+-------------------------------------
+
+✔ Expression always promotes to higher type  
+✔ byte/short NEVER stay byte in expressions  
+✔ Result type depends on highest operand  
+
+
+=====================================
+QUICK SUMMARY (EXAM READY)
+=====================================
+
+Widening:
+small → big → automatic → safe  
+
+Narrowing:
+big → small → manual → data loss  
+
+Truncation:
+decimal removed  
+
+Boolean:
+no conversion  
+
+Promotion:
+expression → converted to highest type  
+
+
+=====================================
