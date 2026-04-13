@@ -11,3 +11,14 @@ i-- ; i = i - 1 ;
 
 prefix and post fix remaining : 
 
+a = ++b; asign new incremented value ;
+a = b++; assign old value then increment ;
+
+
+2. Relational Operators
+// Relational Operators == ,!= , < , > , <= , >=
+
+always give boolean values 
+
+
+3. Bitwise Operators 
