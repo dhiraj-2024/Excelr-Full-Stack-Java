@@ -1,0 +1,280 @@
+=====================================
+CONDITIONAL STATEMENTS IN JAVA
+=====================================
+
+Definition:
+Conditional statements are used to control the flow of execution
+based on conditions (true / false).
+
+
+=====================================
+1) IF - ELSE STATEMENT
+=====================================
+
+SYNTAX:
+if (condition) {
+    // executes if true
+} else {
+    // executes if false
+}
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int age = 18;
+
+if (age >= 18) {
+    System.out.println("Eligible");
+} else {
+    System.out.println("Not Eligible");
+}
+
+-------------------------------------
+IMPORTANT POINTS
+-------------------------------------
+
+✔ Condition must be boolean  
+✔ Only one block executes  
+✔ Used for simple decisions  
+
+
+=====================================
+2) IF - ELSE IF LADDER
+=====================================
+
+Used when multiple conditions are checked
+
+-------------------------------------
+SYNTAX
+-------------------------------------
+
+if (condition1) {
+    // code
+} else if (condition2) {
+    // code
+} else if (condition3) {
+    // code
+} else {
+    // default
+}
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int marks = 75;
+
+if (marks >= 90) {
+    System.out.println("A");
+} else if (marks >= 75) {
+    System.out.println("B");
+} else if (marks >= 50) {
+    System.out.println("C");
+} else {
+    System.out.println("Fail");
+}
+
+-------------------------------------
+IMPORTANT POINTS
+-------------------------------------
+
+✔ Conditions checked from top → bottom  
+✔ First true block executes  
+✔ Rest are skipped  
+
+
+=====================================
+3) NESTED IF - ELSE
+=====================================
+
+if inside another if
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int age = 20;
+boolean hasLicense = true;
+
+if (age >= 18) {
+    if (hasLicense) {
+        System.out.println("Can Drive");
+    } else {
+        System.out.println("No License");
+    }
+} else {
+    System.out.println("Too Young");
+}
+
+-------------------------------------
+IMPORTANT POINTS
+-------------------------------------
+
+✔ Used for dependent conditions  
+✔ Can become complex if overused  
+
+
+=====================================
+4) SWITCH CASE
+=====================================
+
+Used for multiple choices (based on single variable)
+
+-------------------------------------
+SYNTAX
+-------------------------------------
+
+switch (expression) {
+    case value1:
+        // code
+        break;
+
+    case value2:
+        // code
+        break;
+
+    default:
+        // default block
+}
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int day = 2;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+
+    case 2:
+        System.out.println("Tuesday");
+        break;
+
+    default:
+        System.out.println("Invalid");
+}
+
+-------------------------------------
+IMPORTANT POINTS
+-------------------------------------
+
+✔ Only equality (==) check  
+✔ break prevents fall-through  
+✔ default is optional  
+
+-------------------------------------
+FALL-THROUGH (IMPORTANT)
+-------------------------------------
+
+int x = 1;
+
+switch (x) {
+    case 1:
+        System.out.println("One");
+    case 2:
+        System.out.println("Two");
+}
+
+OUTPUT:
+One
+Two   // because no break
+
+
+=====================================
+SWITCH vs IF-ELSE-IF LADDER
+=====================================
+
+SWITCH:
+✔ Only equality check (==)
+✔ Faster execution
+✔ Uses Jump Table / Lookup Table
+
+IF-ELSE-IF:
+✔ Can check range & complex conditions
+✔ Slower (checks one by one)
+
+
+=====================================
+INTERNAL WORKING (IMPORTANT)
+=====================================
+
+SWITCH:
+- Uses Jump Table (direct jump to case)
+- OR Lookup Table (optimized mapping)
+👉 Time complexity ≈ O(1)
+
+IF-ELSE-IF:
+- Sequential checking
+👉 Time complexity ≈ O(n)
+
+
+=====================================
+WHEN TO USE WHAT
+=====================================
+
+Use SWITCH:
+✔ Fixed values
+✔ Menu, options, days
+
+Use IF-ELSE:
+✔ Range conditions
+✔ Complex logic
+
+
+=====================================
+INTERVIEW QUESTIONS (VERY IMPORTANT)
+=====================================
+
+Q1: Difference between switch and if-else?
+✔ switch → equality only, faster
+✔ if-else → complex conditions
+
+-------------------------------------
+
+Q2: What happens if break is missing?
+✔ Fall-through (next cases execute)
+
+-------------------------------------
+
+Q3: Which data types allowed in switch?
+✔ byte, short, int, char, String (Java 7+)
+❌ float, double, boolean NOT allowed
+
+-------------------------------------
+
+Q4: Can we use expressions in switch?
+✔ Yes (must result in allowed type)
+
+-------------------------------------
+
+Q5: Can we use multiple cases together?
+✔ Yes
+
+case 1:
+case 2:
+    System.out.println("Same block");
+
+-------------------------------------
+
+Q6: Which is faster?
+✔ switch (due to jump table)
+
+-------------------------------------
+
+Q7: Can default come anywhere?
+✔ Yes (but usually last)
+
+
+=====================================
+QUICK SUMMARY (REVISION)
+=====================================
+
+if → simple condition  
+if-else-if → multiple conditions  
+nested if → dependent logic  
+switch → fixed value matching  
+
+=====================================

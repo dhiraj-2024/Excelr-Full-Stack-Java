@@ -3,14 +3,14 @@ public class Conditions {
     public static void main(String[] argu) {
         int age = 10;
 
-        // if and else condition
+        // if - else condition
         if (age < 18) {
             System.out.println("not allow to drive the car");
         } else {
             System.out.println("you are allow to drive the car");
         }
 
-        // if-else-if conditions
+        // if-else-if ladder conditions
 
         int marks = 85;
         if (marks >= 35 && marks < 50) {
@@ -25,17 +25,36 @@ public class Conditions {
 
         // nested if else conditions
 
-        int Age = 14;
-        boolean licence = true;
-        if (Age >= 18) {
-            if (licence == true) {
+        int Age = 17;
+
+        if (Age > 18) {
+            if (Age == 18) {
                 System.out.println("you can drive the car");
-            } else {
-                System.out.println("you dont have licence for driving");
             }
-        } else {
-            System.out.println("You are under age can not drive the car");
+            else {
+                System.out.println("you can not drive the car");
+            }
+            if (Age < 18) {
+                System.out.println("you dont have licens");
+                
+            }
         }
+        else {
+            System.out.println("Hello bachhe tum kyo gadi chala rahe ho");
+        }
+
+
+        // int Age = 14;
+        // boolean licence = true;
+        // if (Age >= 18) {
+        //     if (licence == true) {
+        //         System.out.println("you can drive the car");
+        //     } else {
+        //         System.out.println("you dont have licence for driving");
+        //     }
+        // } else {
+        //     System.out.println("You are under age can not drive the car");
+        // }
 
         // switch condition
         String fruit = "mango";
