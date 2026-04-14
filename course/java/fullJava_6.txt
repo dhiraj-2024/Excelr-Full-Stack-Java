@@ -1,24 +1,274 @@
-## Operators in java 
+=====================================
+OPERATORS IN JAVA (DETAILED NOTES)
+=====================================
 
-1. Arithmetic Operators 
-
-+,-,*,%,/,+=,-+,*=,/=,++ ,--
-
-i++ ;  i = i + 1 ;
-
-i-- ; i = i - 1 ;
+Definition:
+Operators are symbols used to perform operations on variables and values.
 
 
-prefix and post fix remaining : 
+=====================================
+1) ARITHMETIC OPERATORS
+=====================================
 
-a = ++b; asign new incremented value ;
-a = b++; assign old value then increment ;
+Operators:
++   → Addition
+-   → Subtraction
+*   → Multiplication
+/   → Division
+%   → Modulus (remainder)
+
+-------------------------------------
+EXAMPLES
+-------------------------------------
+
+int a = 10, b = 3;
+
+System.out.println(a + b);  // 13
+System.out.println(a - b);  // 7
+System.out.println(a * b);  // 30
+System.out.println(a / b);  // 3   (integer division)
+System.out.println(a % b);  // 1   (remainder)
+
+-------------------------------------
+SHORTCUT OPERATORS
+-------------------------------------
+
++=  → a = a + b
+-=  → a = a - b
+*=  → a = a * b
+/=  → a = a / b
+
+-------------------------------------
+INCREMENT / DECREMENT
+-------------------------------------
+
+i++  → i = i + 1
+i--  → i = i - 1
+
+-------------------------------------
+PREFIX vs POSTFIX (VERY IMPORTANT)
+-------------------------------------
+
+int a, b = 5;
+
+a = ++b;  
+// Step: increment first → b = 6 → assign → a = 6
+
+a = b++;  
+// Step: assign first → a = 5 → then increment → b = 6
+
+-------------------------------------
+INTERVIEW TRICK
+-------------------------------------
+
+int x = 5;
+int y = x++ + ++x;
+
+// Step-by-step:
+// x++ → use 5 → x becomes 6
+// ++x → x becomes 7 → use 7
+
+// y = 5 + 7 = 12
+
+=====================================
+2) RELATIONAL OPERATORS
+=====================================
+
+Operators:
+==  → Equal to
+!=  → Not equal
+>   → Greater than
+<   → Less than
+>=  → Greater than equal
+<=  → Less than equal
+
+-------------------------------------
+IMPORTANT POINT
+-------------------------------------
+
+✔ Always return BOOLEAN (true/false)
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int a = 10, b = 20;
+
+System.out.println(a == b);  // false
+System.out.println(a < b);   // true
 
 
-2. Relational Operators
-// Relational Operators == ,!= , < , > , <= , >=
+=====================================
+3) BITWISE OPERATORS (ADVANCED)
+=====================================
 
-always give boolean values 
+Operators:
+&   → AND
+|   → OR
+^   → XOR
+~   → NOT
+>>  → Right Shift
+<<  → Left Shift
+>>> → Unsigned Right Shift
+
+-------------------------------------
+EXAMPLE (AND)
+-------------------------------------
+
+int a = 5;   // 0101
+int b = 3;   // 0011
+
+System.out.println(a & b);  // 0001 → 1
+
+-------------------------------------
+EXAMPLE (OR)
+-------------------------------------
+
+System.out.println(a | b);  // 0111 → 7
+
+-------------------------------------
+EXAMPLE (XOR)
+-------------------------------------
+
+System.out.println(a ^ b);  // 0110 → 6
+
+-------------------------------------
+EXAMPLE (NOT)
+-------------------------------------
+
+int x = 5;
+System.out.println(~x);   // -(x+1) → -6
+
+-------------------------------------
+SHIFT OPERATORS
+-------------------------------------
+
+Left Shift (<<):
+5 << 1 → 101 → 1010 → 10
+
+Right Shift (>>):
+5 >> 1 → 101 → 10 → 2
+
+-------------------------------------
+IMPORTANT POINT
+-------------------------------------
+
+✔ Works on binary level  
+✔ Very fast operations  
 
 
-3. Bitwise Operators 
+=====================================
+4) LOGICAL OPERATORS
+=====================================
+
+Operators:
+&& → Logical AND (short circuit)
+|| → Logical OR
+&  → Logical AND (no short circuit)
+
+-------------------------------------
+SHORT CIRCUIT (VERY IMPORTANT)
+-------------------------------------
+
+int a = 10;
+
+if (a < 5 && ++a > 10) {
+    // second condition NOT checked
+}
+
+System.out.println(a);  // 10
+
+-------------------------------------
+NO SHORT CIRCUIT
+-------------------------------------
+
+if (a < 5 & ++a > 10) {
+    // both conditions checked
+}
+
+System.out.println(a);  // 11
+
+-------------------------------------
+UNDERSTANDING
+-------------------------------------
+
+&& → stops early (efficient)
+&  → checks all (used rarely in logic)
+
+
+=====================================
+5) ASSIGNMENT OPERATORS
+=====================================
+
+Operator:
+=  → Assign value
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int a = 10;
+
+-------------------------------------
+COMBINED ASSIGNMENT
+-------------------------------------
+
++=, -=, *=, /=
+
+int x = 10;
+x += 5;   // x = 15
+
+
+=====================================
+IMPORTANT INTERVIEW QUESTIONS
+=====================================
+
+Q1: Difference between i++ and ++i?
+✔ i++ → use first, then increment
+✔ ++i → increment first, then use
+
+-------------------------------------
+
+Q2: What is output?
+int a = 5;
+System.out.println(a++ + ++a);
+
+Step:
+a++ → 5 (a=6)
+++a → 7
+
+Output = 5 + 7 = 12
+
+-------------------------------------
+
+Q3: Difference between && and & ?
+✔ && → short circuit
+✔ &  → evaluates both conditions
+
+-------------------------------------
+
+Q4: Why ~5 = -6?
+✔ Formula: ~x = -(x + 1)
+
+-------------------------------------
+
+Q5: What is type of result in relational operators?
+✔ Always boolean
+
+-------------------------------------
+
+Q6: Why 10/3 = 3 ?
+✔ Integer division (decimal ignored)
+
+
+=====================================
+QUICK SUMMARY (REVISION)
+=====================================
+
+Arithmetic → + - * / %  
+Relational → boolean result  
+Bitwise → binary level  
+Logical → conditions  
+Assignment → store values  
+
+=====================================
