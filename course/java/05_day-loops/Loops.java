@@ -2,22 +2,36 @@ public class Loops {
     public static void main(String[] argu) {
         System.out.println("hwllo boys");
 
-        // for loop
-        for (int i = 0; i <= 10; i++) {
-            System.out.println(i);
-        }
+        // while loop 
+        int i = 0;
 
-        // while loop
-        int j = 50;
-        while (j <= 100) {
-            System.out.println(j);
-            j++;
+        while (i <= 10) {
+            System.out.println(i);
+            i++;
+
         }
+        
         // do while loop
-        int k = 0;
-        do {
+
+        int j = 11;
+        do{
+            System.out.println("j is : "+j);
+            j++;
+        } while (j < 20);
+
+
+        // int k = 20;
+        for (int k = 20; k <= 30; k++) {
             System.out.println(k);
-            k++;
-        } while (k <= 10);
+        }
+        
+        // PRINTING PATTERS 
+
+        for (int s = 0; s <= 5; s++) {
+            for (int r = 0; r <= s; r++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 }

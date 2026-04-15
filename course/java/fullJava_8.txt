@@ -1,0 +1,8 @@
+Loops in java : 
+
+flow of control for all the loop 
+ 
+ brake , contineu 
+ pattern printing
+ loop naming lables 
+ 
