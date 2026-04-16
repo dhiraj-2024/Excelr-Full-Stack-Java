@@ -1,0 +1,253 @@
+=====================================
+ARRAYS IN JAVA (DEEP NOTES)
+=====================================
+
+DEFINITION:
+Array = A container object that stores a fixed number of values 
+of the same data type in contiguous memory locations.
+
+
+=====================================
+1) KEY CHARACTERISTICS
+=====================================
+
+✔ Same data type (Homogeneous)
+✔ Fixed size (cannot change after creation)
+✔ Index starts from 0
+✔ Stored in continuous memory
+✔ Faster access (O(1))
+
+
+=====================================
+2) WHY ARRAYS?
+=====================================
+
+// Without array (bad practice)
+int s1 = 10;
+int s2 = 20;
+int s3 = 30;
+
+// With array (best)
+int[] marks = new int[100];
+
+✔ Less code
+✔ Easy loop usage
+✔ Organized data
+
+
+=====================================
+3) DECLARATION & INITIALIZATION
+=====================================
+
+// Declaration
+int[] arr;
+
+// Creation
+arr = new int[5];
+
+// Declaration + Creation
+int[] arr = new int[5];
+
+// Direct initialization
+int[] arr = {10, 20, 30, 40, 50};
+
+
+=====================================
+4) MEMORY CONCEPT
+=====================================
+
+// Stack → reference
+// Heap → actual array
+
+int[] arr = new int[5];
+
+Stack: arr → reference
+Heap:  [0][0][0][0][0]
+
+✔ Each int = 4 bytes
+✔ Total = 5 × 4 = 20 bytes
+
+
+=====================================
+5) DEFAULT VALUES
+=====================================
+
+int → 0
+float → 0.0
+double → 0.0
+boolean → false
+char → '\u0000'
+String → null
+
+
+=====================================
+6) INSERTING VALUES
+=====================================
+
+int[] arr = new int[5];
+
+arr[0] = 10;
+arr[1] = 20;
+arr[2] = 30;
+
+// Using loop
+for(int i = 0; i < arr.length; i++) {
+    arr[i] = i * 10;
+}
+
+
+=====================================
+7) ACCESSING VALUES
+=====================================
+
+// Using index
+System.out.println(arr[0]);
+
+// Using loop
+for(int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
+
+// Enhanced loop
+for(int value : arr) {
+    System.out.println(value);
+}
+
+
+=====================================
+8) LENGTH PROPERTY
+=====================================
+
+int[] arr = new int[5];
+
+arr.length   // ✔ correct
+arr.length() // ❌ wrong
+
+✔ Last index = arr.length - 1
+
+
+=====================================
+9) 2D ARRAY (MATRIX)
+=====================================
+
+int[][] matrix = new int[3][3];
+
+Structure:
+[ [0,0,0],
+  [0,0,0],
+  [0,0,0] ]
+
+-------------------------------------
+ACCESSING
+-------------------------------------
+
+matrix[0][0] = 10;
+matrix[1][2] = 20;
+
+-------------------------------------
+PRINTING
+-------------------------------------
+
+for(int i = 0; i < matrix.length; i++) {
+    for(int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
+    }
+    System.out.println();
+}
+
+
+=====================================
+10) JAGGED ARRAY
+=====================================
+
+int[][] arr = new int[3][];
+
+arr[0] = new int[2];
+arr[1] = new int[4];
+arr[2] = new int[3];
+
+✔ Different column sizes
+
+
+=====================================
+11) IMPORTANT RULES
+=====================================
+
+✔ Index range: 0 to length-1
+✔ Arrays are objects
+✔ Stored in heap memory
+✔ Fixed size (cannot resize)
+
+
+=====================================
+12) COMMON MISTAKES
+=====================================
+
+// ❌ Index out of bound
+arr[5] = 10;
+
+// ❌ length()
+arr.length();
+
+// ❌ Not initialized
+int[] arr;
+arr[0] = 10;
+
+// ❌ Wrong loop
+for(int i = 0; i <= arr.length; i++)
+
+
+=====================================
+13) INTERVIEW QUESTIONS
+=====================================
+
+Q1: Why array index starts from 0?
+✔ Memory address calculation easy
+
+-------------------------------------
+
+Q2: Where array stored?
+✔ Heap memory
+
+-------------------------------------
+
+Q3: Difference array vs ArrayList?
+✔ Array → fixed size
+✔ ArrayList → dynamic size
+
+-------------------------------------
+
+Q4: What is arr.length?
+✔ Property (not method)
+
+-------------------------------------
+
+Q5: What is 2D array?
+✔ Array of arrays
+
+-------------------------------------
+
+Q6: What is jagged array?
+✔ Different column sizes
+
+
+=====================================
+14) TIME COMPLEXITY
+=====================================
+
+Access → O(1)
+Search → O(n)
+Insert → O(n)
+
+
+=====================================
+15) QUICK SUMMARY
+=====================================
+
+Array = Fixed size + same type  
+Index = starts from 0  
+Length = property  
+2D = array of arrays  
+Jagged = uneven columns  
+
+=====================================
