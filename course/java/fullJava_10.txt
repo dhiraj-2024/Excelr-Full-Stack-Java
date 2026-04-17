@@ -1,0 +1,240 @@
+=====================================
+HOW ARRAYS WORK INTERNALLY IN JAVA
+=====================================
+
+=====================================
+1) MEMORY STRUCTURE (VERY IMPORTANT)
+=====================================
+
+Array uses TWO memory areas:
+
+1. STACK MEMORY
+2. HEAP MEMORY
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int[] arr = new int[5];
+
+-------------------------------------
+MEMORY REPRESENTATION
+-------------------------------------
+
+STACK:                    HEAP:
+┌─────────────┐          ┌─────────────────────┐
+│ arr (ref)   │ ───────▶ │ [10][20][30][40][50]│
+└─────────────┘          └─────────────────────┘
+
+✔ "arr" is reference variable (stored in stack)
+✔ Actual array stored in heap
+✔ arr stores BASE ADDRESS of array
+
+
+=====================================
+2) CONTIGUOUS MEMORY
+=====================================
+
+Definition:
+Array elements are stored in continuous memory locations.
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int[] arr = {10, 20, 30, 40};
+
+Memory (assuming base address = 1000):
+
+Index   Value   Address
+[0]     10      1000
+[1]     20      1004
+[2]     30      1008
+[3]     40      1012
+
+✔ int = 4 bytes
+✔ Next address = previous + 4
+
+
+=====================================
+3) RANDOM ACCESS (VERY IMPORTANT)
+=====================================
+
+Definition:
+Accessing any element directly using index in constant time O(1)
+
+-------------------------------------
+FORMULA
+-------------------------------------
+
+Address = Base Address + (Index × Size of Data Type)
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+arr[2] = ?
+
+Base Address = 1000  
+Index = 2  
+Size (int) = 4 bytes  
+
+Address = 1000 + (2 × 4)  
+        = 1000 + 8  
+        = 1008  
+
+Value at 1008 = 30
+
+-------------------------------------
+WHY FAST?
+-------------------------------------
+
+✔ No need to traverse
+✔ Direct calculation
+✔ O(1) time complexity
+
+
+=====================================
+4) HOW COMPILER/JVM ACCESSES ARRAY
+=====================================
+
+When you write:
+
+System.out.println(arr[2]);
+
+-------------------------------------
+INTERNAL STEPS
+-------------------------------------
+
+1. Get base address from reference (arr)
+2. Calculate address using formula:
+   base + (index × size)
+3. Go to that memory location
+4. Fetch value
+5. Print output
+
+✔ No loop used
+✔ Direct memory access
+
+
+=====================================
+5) ARRAY SIZE & MEMORY ALLOCATION
+=====================================
+
+int[] arr = new int[5];
+
+✔ Size fixed at creation
+✔ Memory allocated in heap
+✔ Total memory = size × datatype size
+
+Example:
+5 elements × 4 bytes = 20 bytes
+
+
+=====================================
+6) ARRAY OF ARRAYS (2D ARRAY)
+=====================================
+
+Definition:
+2D array = Array of arrays
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+int[][] arr = new int[3][3];
+
+-------------------------------------
+MEMORY STRUCTURE
+-------------------------------------
+
+STACK:                HEAP:
+
+arr ─────▶  [ref][ref][ref]
+              │    │    │
+              ▼    ▼    ▼
+            [ ][ ][ ]  (row 0)
+            [ ][ ][ ]  (row 1)
+            [ ][ ][ ]  (row 2)
+
+✔ arr → points to first array
+✔ arr[0], arr[1], arr[2] → each stores address of another array
+
+
+=====================================
+7) RANDOM ACCESS IN 2D ARRAY
+=====================================
+
+arr[i][j]
+
+-------------------------------------
+STEPS
+-------------------------------------
+
+1. Get base address of arr
+2. Access row → arr[i] (reference)
+3. Use same formula for column:
+
+Address = base_of_row + (j × size)
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+arr[1][2]
+
+Step 1: go to arr[1] → get row address  
+Step 2: calculate column address  
+Step 3: fetch value  
+
+✔ Same logic repeated
+
+
+=====================================
+8) IMPORTANT INTERVIEW POINTS
+=====================================
+
+✔ Why array is fast?
+→ Because of random access (O(1))
+
+✔ Why contiguous memory?
+→ Helps in direct address calculation
+
+✔ Why index starts from 0?
+→ Formula becomes simple:
+  base + (0 × size) = base address
+
+✔ Can array store different types?
+→ ❌ No (only same type)
+
+✔ Where array stored?
+→ Heap memory
+
+✔ Where reference stored?
+→ Stack memory
+
+
+=====================================
+9) LIMITATIONS OF ARRAY
+=====================================
+
+✔ Fixed size
+✔ Cannot grow dynamically
+✔ Wastage of memory possible
+✔ Insertion/deletion costly (O(n))
+
+
+=====================================
+10) QUICK SUMMARY
+=====================================
+
+Array = contiguous memory  
+Reference → stored in stack  
+Data → stored in heap  
+Access → base + (index × size)  
+Time → O(1)  
+
+2D Array = array of arrays  
+Access = arr[i][j]  
+
+=====================================
