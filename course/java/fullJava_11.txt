@@ -1,0 +1,315 @@
+=====================================
+FUNCTIONS (METHODS) IN JAVA
+=====================================
+
+DEFINITION:
+A function (method) is a block of code that performs a specific task 
+and can be reused multiple times.
+
+-------------------------------------
+SYNTAX
+-------------------------------------
+
+returnType methodName(parameters) {
+    // logic
+    return value;   // if required
+}
+
+
+=====================================
+1) TYPES OF FUNCTIONS
+=====================================
+
+-------------------------------------
+1. NO INPUT, NO OUTPUT
+-------------------------------------
+
+static void greet() {
+    System.out.println("Hello");
+}
+
+✔ No parameters
+✔ No return value
+
+-------------------------------------
+2. INPUT, NO OUTPUT
+-------------------------------------
+
+static void sayHello(String name) {
+    System.out.println("Hello " + name);
+}
+
+✔ Takes input
+✔ No return value
+
+-------------------------------------
+3. NO INPUT, OUTPUT
+-------------------------------------
+
+static int getNumber() {
+    return 10;
+}
+
+✔ No parameters
+✔ Returns value
+
+-------------------------------------
+4. INPUT, OUTPUT
+-------------------------------------
+
+static int sum(int a, int b) {
+    return a + b;
+}
+
+✔ Takes input
+✔ Returns result
+
+
+=====================================
+2) COMPLETE EXAMPLE
+=====================================
+
+public class Functi {
+
+    public static void main(String[] args) {
+
+        int result = sum(12, 30);
+        System.out.println(result);
+
+        greet();
+        sayHello("Dhiraj");
+
+        int x = getNumber();
+        System.out.println(x);
+    }
+
+    static int sum(int i, int j) {
+        return i + j;
+    }
+
+    static void greet() {
+        System.out.println("Hello");
+    }
+
+    static void sayHello(String name) {
+        System.out.println("Hello " + name);
+    }
+
+    static int getNumber() {
+        return 10;
+    }
+}
+
+
+=====================================
+3) MAIN FUNCTION (ENTRY POINT)
+=====================================
+
+public static void main(String[] args)
+
+-------------------------------------
+BREAKDOWN
+-------------------------------------
+
+public  → accessible everywhere  
+static  → no object needed  
+void    → no return value  
+main    → method name (fixed)  
+String[] args → command line arguments  
+
+-------------------------------------
+WORKING
+-------------------------------------
+
+✔ JVM starts execution from main()
+✔ Calls other methods from main()
+
+
+=====================================
+4) FUNCTION OVERLOADING
+=====================================
+
+Definition:
+Same method name but different parameters
+
+-------------------------------------
+EXAMPLES
+-------------------------------------
+
+static int sum(int a, int b) {
+    return a + b;
+}
+
+static int sum(int a, int b, int c) {
+    return a + b + c;
+}
+
+static double sum(double a, double b) {
+    return a + b;
+}
+
+-------------------------------------
+WAYS TO OVERLOAD
+-------------------------------------
+
+✔ Change number of parameters  
+✔ Change data type  
+✔ Change order of parameters  
+
+-------------------------------------
+NOT ALLOWED
+-------------------------------------
+
+Changing only return type ❌
+
+
+=====================================
+5) FUNCTION CALL STACK (CHAINING)
+=====================================
+
+Definition:
+When one function calls another
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+static void A() {
+    B();
+}
+
+static void B() {
+    C();
+}
+
+static void C() {
+    System.out.println("End");
+}
+
+-------------------------------------
+FLOW
+-------------------------------------
+
+main → A → B → C → return → B → A → main
+
+✔ Works like stack (LIFO)
+
+
+=====================================
+6) VARIABLE SCOPE
+=====================================
+
+-------------------------------------
+LOCAL VARIABLE
+-------------------------------------
+
+void test() {
+    int a = 10;  // local
+}
+
+✔ Accessible only inside function
+
+-------------------------------------
+GLOBAL (CLASS LEVEL)
+-------------------------------------
+
+class Demo {
+    static int x = 100;
+}
+
+✔ Accessible in all methods
+
+-------------------------------------
+IMPORTANT
+-------------------------------------
+
+✔ Local variable > higher priority inside method
+✔ No access outside block
+
+
+=====================================
+7) RECURSION (IMPORTANT)
+=====================================
+
+Definition:
+Function calling itself
+
+-------------------------------------
+EXAMPLE
+-------------------------------------
+
+static void print(int n) {
+    if(n == 0) return;
+    System.out.println(n);
+    print(n - 1);
+}
+
+-------------------------------------
+OUTPUT
+-------------------------------------
+
+5 4 3 2 1
+
+-------------------------------------
+IMPORTANT RULE
+-------------------------------------
+
+✔ Must have BASE CONDITION  
+✔ Otherwise infinite loop (StackOverflowError)
+
+
+=====================================
+8) IMPORTANT INTERVIEW QUESTIONS
+=====================================
+
+Q1: What is function?
+✔ Reusable block of code
+
+-------------------------------------
+
+Q2: Difference between function & method?
+✔ In Java → both same (method)
+
+-------------------------------------
+
+Q3: What is main method?
+✔ Entry point of program
+
+-------------------------------------
+
+Q4: Can we overload main()?
+✔ Yes, but JVM calls only standard main()
+
+-------------------------------------
+
+Q5: What is recursion?
+✔ Function calling itself
+
+-------------------------------------
+
+Q6: What is stack overflow?
+✔ Too many recursive calls without base case
+
+-------------------------------------
+
+Q7: Can we return multiple values?
+✔ Not directly (use array/object)
+
+-------------------------------------
+
+Q8: What is scope?
+✔ Area where variable is accessible
+
+
+=====================================
+9) QUICK SUMMARY
+=====================================
+
+Function = reusable code  
+4 types = input/output combinations  
+main() = entry point  
+Overloading = same name, diff parameters  
+Recursion = function calling itself  
+Scope = variable visibility  
+
+=====================================
