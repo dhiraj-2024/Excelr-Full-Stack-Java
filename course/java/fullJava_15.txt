@@ -1,0 +1,19 @@
+static keyword in java : 
+
+
+these are class variable ,
+not strore in heap momory ,
+called by using the class name also and the object refrence name also ,
+
+this not only for variable we can use it for methods also 
+
+
+
+final keyword 👍
+
+constatn variable : 
+
+naming conventions : FIRST_NAME 
+
+
+
