@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matoshri College of Nursing - Official Letter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e0e0e0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12px;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .toolbar {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 850px;
+            width: 100%;
+        }
+
+        .toolbar span {
+            opacity: 0.8;
+        }
+
+        .btn {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn:hover {
+            background: #d35400;
+        }
+
+        .btn-blue {
+            background: #2980b9;
+        }
+
+        .btn-blue:hover {
+            background: #1a6a99;
+        }
+
+        .page {
+            width: 850px;
+            min-height: 1100px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+
+        }
+
+        .header-img {
+            width: 100%;
+            height: 250px;
+            padding: 5px 5px;
+            display: block;
+
+        }
+
+        .letter-body {
+            padding: 0px 40px 24px 40px;
+        }
+
+        .ref-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 12.5px;
+        }
+
+        .section-block {
+            margin-bottom: 10px;
+            line-height: 1.55;
+            font-size: 11px;
+        }
+
+        .from-block {
+            margin-bottom: 12px;
+        }
+
+        .to-block {
+            margin-bottom: 14px;
+        }
+
+        .subject-line {
+            margin-bottom: 12px;
+            font-size: 11px;
+        }
+
+        .salutation {
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+
+        .para {
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 11px;
+        }
+
+        .study-title {
+            font-weight: 700;
+            display: block;
+            margin: 6px 0;
+            font-size: 11px;
+        }
+
+        .tools-heading {
+            margin-bottom: 4px;
+            font-size: 11px;
+        }
+
+        .tools-list {
+            margin-left: 32px;
+            margin-bottom: 10px;
+        }
+
+        .tools-list li {
+            margin-bottom: 2px;
+            font-size: 11px;
+        }
+
+        .closing-para {
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 11px;
+        }
+
+        .thanking {
+            margin-bottom: 2px;
+            font-size: 11px;
+        }
+
+        .faithfully {
+            margin-bottom: 16px;
+            font-size: 11px;
+        }
+
+        .students-section {
+            margin-bottom: 20px;
+        }
+
+        .students-section .label {
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 11px;
+        }
+
+        .student-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .student-num {
+            width: 22px;
+            font-size: 11px;
+            flex-shrink: 0;
+        }
+
+        .student-name {
+            border-bottom: 1px solid #555;
+            flex: 1;
+            min-height: 19px;
+            padding: 2px 4px;
+            font-size: 11px;
+            outline: none;
+        }
+
+        .student-name:focus {
+            border-bottom: 2px solid #c0392b;
+            background: #fff8f0;
+        }
+
+        .guide-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 11px;
+        }
+
+        .guide-label {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .guide-line {
+            border-bottom: 1px solid #555;
+            width: 200px;
+            min-height: 20px;
+        }
+
+        .footer-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 10px;
+        }
+
+        .principal-block {
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        .principal-bold {
+            font-weight: bold;
+            font-size: 13.5px;
+            text-align: center;
+        }
+
+        .stamp-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px dashed #ffffff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 11px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        [contenteditable="true"] {
+            outline: none;
+            cursor: text;
+            border-radius: 2px;
+            transition: background 0.15s;
+        }
+
+        [contenteditable="true"]:hover {
+            background: rgba(230, 126, 34, 0.08);
+        }
+
+        [contenteditable="true"]:focus {
+            background: rgba(230, 126, 34, 0.13);
+            box-shadow: 0 0 0 1px rgba(230, 126, 34, 0.4);
+        }
+
+        .edit-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .toolbar {
+                display: none !important;
+            }
+
+            .edit-hint {
+                display: none !important;
+            }
+
+            .page {
+                box-shadow: none;
+                width: 100%;
+            }
+
+            [contenteditable]:hover,
+            [contenteditable]:focus {
+                background: transparent !important;
+                box-shadow: none !important;
+            }
+
+            .stamp-placeholder {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <span>✏️ Click any text to edit &nbsp;|&nbsp; All fields are editable</span>
+        <button class="btn btn-blue" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+
+    <div class="page">
+
+        <!-- REAL HEADER IMAGE -->
+        <img src="./image-removebg-preview (4).png" class="header-img" alt="">
+        <!-- LETTER BODY -->
+        <div class="letter-body">
+
+            <div class="ref-row">
+                <span>Outward No. MES / MCON / <span contenteditable="true">______/20___</span></span>
+                <span>Date : <span contenteditable="true">___/___/______</span></span>
+            </div>
+
+            <div class="section-block from-block">
+                <div><strong>From</strong></div>
+                <div contenteditable="true">The Principal of</div>
+                <div contenteditable="true">Matoshri College of Nursing</div>
+                <div contenteditable="true">Eklahare, Nashik</div>
+                <div contenteditable="true">Maharashtra</div>
+            </div>
+
+            <div class="section-block to-block">
+                <div><strong>To</strong></div>
+                <div contenteditable="true">The Medical Superintendent</div>
+                <div contenteditable="true">KARE Renascence Hospital (KRH)</div>
+                <div contenteditable="true">Nashik, Maharashtra</div>
+            </div>
+
+            <div class="subject-line">
+                <strong>Subject:</strong> <span contenteditable="true">Request for Permission for Tool Validation for
+                    Research Study</span>
+            </div>
+
+            <div class="salutation"><strong>Respected Sir/Madam,</strong></div>
+
+            <div class="para" contenteditable="true">
+                We, the undersigned students of Matoshri College of Nursing, Eklahare, Nashik, are conducting a research
+                study entitled:
+            </div>
+
+            <div class="para">
+                <span class="study-title" contenteditable="true">"A study to assess the impact of educational intervention on knowledge regarding breast self examination (BSE) among
+                female teachers of selected schools."</span>
+            </div>
+
+            <div class="para">
+                As part of our research work, we request your permission to conduct <strong>tool validation</strong> in
+                your esteemed hospital.
+            </div>
+
+            <div class="tools-heading">The following tools and instruments will be used for the study:</div>
+            <div class="tools-heading">Tools and Instruments Used:</div>
+            <ol class="tools-list">
+                <li contenteditable="true">Structured Interview Schedule</li>
+                <li contenteditable="true">Physiological Assessment Tool</li>
+                <li contenteditable="true">Psychosocial Assessment Tool</li>
+                <li contenteditable="true">Checklist for Nursing Intervention</li>
+            </ol>
+
+            <div class="closing-para" contenteditable="true">
+                We assure you that the information collected will be used strictly for academic purposes, and
+                confidentiality of all participants will be maintained.<br>
+                Therefore, we kindly request you to grant permission for tool validation in your hospital.
+            </div>
+
+            <div class="thanking">Thanking you.</div>
+            <div class="faithfully">Yours faithfully,</div>
+
+            <div class="students-section">
+                <div class="label">Research Students</div>
+                <div class="student-row"><span class="student-num">1.</span>
+                    <div class="student-name" contenteditable="true"></div>
+                </div>
+                <div class="student-row"><span class="student-num">2.</span>
+                    <div class="student-name" contenteditable="true"></div>
+                </div>
+                <div class="student-row"><span class="student-num">3.</span>
+                    <div class="student-name" contenteditable="true"></div>
+                </div>
+                <div class="student-row"><span class="student-num">4.</span>
+                    <div class="student-name" contenteditable="true"></div>
+                </div>
+                <div class="student-row"><span class="student-num">5.</span>
+                    <div class="student-name" contenteditable="true"></div>
+                </div>
+                <div class="student-row"><span class="student-num">6.</span>
+                    <div class="student-name" contenteditable="true"></div>
+                </div>
+            </div>
+
+            <div class="guide-row">
+                <span class="guide-label">Research Guide:</span>
+                <div class="guide-line" contenteditable="true"></div>
+            </div>
+
+            <div class="footer-section">
+                <div class="principal-block">
+                    <!-- <div>Principal</div>
+                    <div>Matoshri College of Nursing</div>
+                    <div>Eklahare, Nashik</div>
+                    <br>
+                    <div class="principal-bold">PRINCIPAL</div>
+                    <div class="principal-bold">MATOSHRI COLLEGE OF NURSING</div>
+                    <div class="principal-bold">EKLAHARE, NASHIK</div> -->
+                </div>
+                <div style="text-align:center;">
+                    <div class="stamp-placeholder">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="edit-hint">✏️ Click any text to edit</div>
+    <script>
+        document.querySelectorAll('.student-name').forEach(el => {
+            el.addEventListener('focus', () => el.style.borderBottom = '2px solid #c0392b');
+            el.addEventListener('blur', () => el.style.borderBottom = '1px solid #555');
+        });
+    </script>
+</body>
+
+</html>

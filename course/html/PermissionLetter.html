@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matoshri College of Nursing - Permission Letter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e0e0e0;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12px;
+            color: #111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .toolbar {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 850px;
+            width: 100%;
+        }
+
+        .toolbar span {
+            opacity: 0.8;
+        }
+
+        .btn {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn:hover {
+            background: #d35400;
+        }
+
+        .btn-blue {
+            background: #2980b9;
+        }
+
+        .btn-blue:hover {
+            background: #1a6a99;
+        }
+
+        .page {
+            width: 850px;
+            min-height: 1100px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .header-img {
+            width: 100%;
+            height: 250px;
+            padding: 5px 5px;
+            display: block;
+        }
+
+        .letter-body {
+            padding: 0px 50px 24px 50px;
+        }
+
+        .ref-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+
+        /* Centered bold title */
+        .letter-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            text-decoration: underline;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+
+        .section-block {
+            margin-bottom: 6px;
+            line-height: 1.55;
+            font-size: 12px;
+        }
+
+        .from-block {
+            margin-bottom: 10px;
+        }
+
+        .to-block {
+            margin-bottom: 4px;
+        }
+
+        /* blank underline for hospital name */
+        .to-line {
+            border-bottom: 1px solid #444;
+            width: 260px;
+            min-height: 18px;
+            display: inline-block;
+            margin-top: 2px;
+        }
+
+        .subject-line {
+            margin-bottom: 10px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .salutation {
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .para {
+            margin-bottom: 8px;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 12px;
+        }
+
+        .study-title {
+            font-weight: bold;
+            display: block;
+            margin: 6px 0;
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        /* Student list inside body paragraph */
+        .student-list {
+            margin-left: 40px;
+            margin-bottom: 8px;
+        }
+
+        .student-list li {
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .student-list li [contenteditable] {
+            min-width: 120px;
+            display: inline-block;
+        }
+
+        .guide-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+            font-size: 12px;
+            gap: 8px;
+        }
+
+        .guide-label {
+            font-weight: bold;
+        }
+
+        .guide-line {
+            border-bottom: 1px solid #555;
+            width: 200px;
+            min-height: 18px;
+        }
+
+        .thanking {
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+
+        .faithfully {
+            margin-bottom: 30px;
+            font-size: 12px;
+        }
+
+        .footer-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .principal-block {
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .principal-bold {
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .stamp-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px dashed #ffffff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 10px;
+        }
+
+        [contenteditable="true"] {
+            outline: none;
+            cursor: text;
+            border-radius: 2px;
+            transition: background 0.15s;
+        }
+
+        [contenteditable="true"]:hover {
+            background: rgba(230, 126, 34, 0.08);
+        }
+
+        [contenteditable="true"]:focus {
+            background: rgba(230, 126, 34, 0.13);
+            box-shadow: 0 0 0 1px rgba(230, 126, 34, 0.4);
+        }
+
+        .edit-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: white;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .toolbar {
+                display: none !important;
+            }
+
+            .edit-hint {
+                display: none !important;
+            }
+
+            .page {
+                box-shadow: none;
+                width: 100%;
+            }
+
+            [contenteditable]:hover,
+            [contenteditable]:focus {
+                background: transparent !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <span>✏️ Click any text to edit &nbsp;|&nbsp; All fields are editable</span>
+        <button class="btn btn-blue" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+
+    <div class="page">
+
+        <!-- HEADER IMAGE -->
+        <img src="./image-removebg-preview (4).png" class="header-img" alt="">
+
+        <div class="letter-body">
+
+            <!-- Ref & Date -->
+            <div class="ref-row">
+                <span>Outward No. MES / MCON / <span contenteditable="true">______/20___</span></span>
+                <span>Date : <span contenteditable="true">___/___/______</span></span>
+            </div>
+
+            <!-- Centered Title -->
+            <div class="letter-title">PERMISSION LETTER TO CONDUCT THE STUDY</div>
+
+            <!-- FROM -->
+            <div class="section-block from-block">
+                <div contenteditable="true">From, Principal of</div>
+                <div contenteditable="true">Matoshri College of Nursing Eklahare,</div>
+                <div contenteditable="true">Nashik</div>
+            </div>
+
+            <!-- TO -->
+            <div class="section-block to-block">
+                <div>To,</div>
+                <div contenteditable="true">The Medical Superintendent / Director</div>
+                <div class="to-line" contenteditable="true"></div>
+            </div>
+
+            <!-- Subject -->
+            <div class="subject-line">
+                <strong>Subject: <span contenteditable="true">Permission to Conduct Research Study</span></strong>
+            </div>
+
+            <!-- Salutation -->
+            <div class="salutation"><strong>Respected Sir/Madam,</strong></div>
+
+            <!-- Para 1 -->
+            <div class="para" contenteditable="true">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is to inform you that the following students of 4th Year B.Sc.
+                Nursing from Matoshri College of Nursing, Nashik, are required to conduct a research study as a part of
+                their academic curriculum in the subject Research and Statistics.
+            </div>
+
+            <!-- Student names intro -->
+            <div class="para">The names of the students are:</div>
+
+            <!-- Student list (editable inline) -->
+            <ol class="student-list">
+                <li><span contenteditable="true">Student Name</span></li>
+                <li><span contenteditable="true">Student Name</span></li>
+                <li><span contenteditable="true">Student Name</span></li>
+                <li><span contenteditable="true">Student Name</span></li>
+                <li><span contenteditable="true">Student Name</span></li>
+                <li><span contenteditable="true">Student Name</span></li>
+            </ol>
+
+            <!-- Study title intro -->
+            <div class="para">The title of the research study is:</div>
+
+            <!-- Study title -->
+            <div class="para">
+                <span class="study-title" contenteditable="true">"A study to assess the impact of educational intervention on knowledge regarding breast self examination (BSE) among
+                female teachers of selected schools.
+"</span>
+            </div>
+
+            <!-- Para 2 -->
+            <div class="para" contenteditable="true">
+                We kindly request you to grant permission to the above students to conduct their research study in your
+                esteemed hospital. The study will be carried out under proper guidance and supervision.
+            </div>
+
+            <!-- Para 3 -->
+            <div class="para" contenteditable="true">
+                We assure you that all ethical principles will be strictly followed. Patient confidentiality will be
+                maintained, informed consent will be obtained, and the study will not interfere with routine hospital
+                activities.
+            </div>
+
+            <!-- Para 4 -->
+            <div class="para" contenteditable="true">
+                The data collected will be used strictly for academic purposes only. Kindly grant the necessary
+                permission.
+            </div>
+
+            <div class="thanking">Thanking you.</div>
+            <div class="faithfully">Yours faithfully,</div>
+
+            <!-- Footer: Principal + Stamp -->
+            <div class="footer-section">
+                <div class="principal-block">
+                    <div>Principal</div>
+                    <div>Matoshri College of Nursing Nashik</div>
+                    <br>
+                    <!-- <div class="principal-bold">PRINCIPAL</div>
+                    <div class="principal-bold">MATOSHRI COLLEGE OF NURSING</div>
+                    <div class="principal-bold">EKLAHARE, NASHIK</div> -->
+                </div>
+                <div style="text-align:center;">
+                    <div class="stamp-placeholder"></div>
+                </div>
+            </div>
+
+        </div><!-- /letter-body -->
+    </div><!-- /page -->
+
+    <div class="edit-hint">✏️ Click any text to edit</div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+Encapsulation : 
+
+access modifiers 
+
+1 . private 
+2. public 
+3. default 
+4. protected 
