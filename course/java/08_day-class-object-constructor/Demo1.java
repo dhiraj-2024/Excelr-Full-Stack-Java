@@ -36,7 +36,6 @@ public class Demo1 {
         Student s2 = new Student();
         s2.name = "pandu";
         System.out.println(s2.name);
-
         Person.p1();
     }
 }
