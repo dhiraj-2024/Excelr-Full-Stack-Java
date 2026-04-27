@@ -1,0 +1,214 @@
+CLASS AND OBJECT IN JAVA – DEEP NOTES
+
+--------------------------------------------------
+
+1. CLASS – DEFINITION
+
+A class is a blueprint or template used to create objects.
+It defines properties (variables) and behaviors (methods).
+
+Syntax:
+class ClassName {
+    // variables (data members)
+    // methods (functions)
+}
+
+Example:
+class Student {
+    String name;
+    int age;
+
+    void display() {
+        System.out.println(name + " " + age);
+    }
+}
+
+--------------------------------------------------
+
+2. OBJECT – DEFINITION
+
+An object is an instance of a class.
+It represents a real-world entity and contains actual values.
+
+Syntax:
+ClassName obj = new ClassName();
+
+Example:
+Student s1 = new Student();
+
+--------------------------------------------------
+
+3. CLASS vs OBJECT
+
+Class:
+- Blueprint / template
+- Logical entity
+- No memory allocated (until object is created)
+
+Object:
+- Instance of class
+- Physical entity
+- Memory allocated in heap
+
+--------------------------------------------------
+
+4. REAL-LIFE EXAMPLE
+
+Class = Car (blueprint)
+Object = Specific car (e.g., Red BMW, White Audi)
+
+Class defines:
+- color
+- speed
+
+Object has actual values:
+- color = Red
+- speed = 120
+
+--------------------------------------------------
+
+5. CREATING MULTIPLE OBJECTS
+
+Student s1 = new Student();
+Student s2 = new Student();
+
+s1.name = "Dhiraj";
+s2.name = "Rahul";
+
+Each object has its own data.
+
+--------------------------------------------------
+
+6. MEMORY ALLOCATION
+
+- Objects are stored in HEAP memory
+- Reference variables are stored in STACK
+
+Example:
+Student s1 = new Student();
+
+s1 → reference (stack)
+new Student() → object (heap)
+
+--------------------------------------------------
+
+7. ACCESSING MEMBERS
+
+Using dot (.) operator:
+
+s1.name = "Dhiraj";
+s1.age = 20;
+s1.display();
+
+--------------------------------------------------
+
+8. CONSTRUCTOR (IMPORTANT)
+
+A constructor is a special method used to initialize objects.
+It has the same name as the class and no return type.
+
+Example:
+class Student {
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+}
+
+Student s1 = new Student("Dhiraj");
+
+--------------------------------------------------
+
+9. TYPES OF CLASSES
+
+1. Normal Class
+2. Abstract Class
+3. Final Class
+4. Static Class (nested)
+5. Inner Class
+
+(Basic exams focus mostly on normal class)
+
+--------------------------------------------------
+
+10. TYPES OF OBJECTS
+
+1. Real-world object (Student, Car)
+2. Anonymous object
+   Example:
+   new Student().display();
+
+--------------------------------------------------
+
+11. IMPORTANT CHARACTERISTICS
+
+Class:
+- Defines structure
+- Contains variables and methods
+
+Object:
+- Represents data
+- Calls methods
+
+--------------------------------------------------
+
+12. ADVANTAGES
+
+- Code reusability
+- Easy maintenance
+- Real-world modeling
+- Modular programming
+
+--------------------------------------------------
+
+13. COMMON INTERVIEW POINTS
+
+- Class is blueprint, object is instance
+- Object creation uses "new" keyword
+- Multiple objects share same class structure
+- Each object has separate memory
+
+--------------------------------------------------
+
+14. SHORT EXAM DEFINITIONS
+
+Class:
+A class is a blueprint used to create objects by defining properties and behaviors.
+
+Object:
+An object is an instance of a class that contains actual data and can use methods.
+
+--------------------------------------------------
+
+15. COMPLETE PROGRAM EXAMPLE
+
+class Student {
+    String name;
+    int age;
+
+    void show() {
+        System.out.println(name + " " + age);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        Student s2 = new Student();
+
+        s1.name = "Dhiraj";
+        s1.age = 20;
+
+        s2.name = "Rahul";
+        s2.age = 22;
+
+        s1.show();
+        s2.show();
+    }
+}
+
+--------------------------------------------------
+
+END OF NOTES
