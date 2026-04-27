@@ -10,3 +10,5 @@ access modifiers
 
 no commits today 
 starting java next topic 
+
+opps finished in some time
