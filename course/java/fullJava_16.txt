@@ -7,8 +7,99 @@ access modifiers
 3. default 
 4. protected 
 
+ENCAPSULATION IN JAVA – NOTES
 
-no commits today 
-starting java next topic 
+Definition:
+Encapsulation is a concept in Java where data (variables) and methods (functions)
+are bundled together into a single unit (class), and direct access to data is restricted.
 
-opps finished in some time
+Simple Meaning:
+Hide data and allow access only through methods.
+
+--------------------------------------------------
+
+Why Use Encapsulation?
+- Data hiding (protects variables)
+- Security (no direct access)
+- Controlled modification using methods
+- Flexibility to change implementation anytime
+
+--------------------------------------------------
+
+How to Achieve Encapsulation?
+1. Declare variables as private
+2. Provide public getter and setter methods
+
+--------------------------------------------------
+
+Example:
+
+class Student {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student();
+
+        s.setName("Dhiraj");
+        s.setAge(20);
+
+        System.out.println(s.getName());
+        System.out.println(s.getAge());
+    }
+}
+
+--------------------------------------------------
+
+Key Points:
+- Variables should be private
+- Methods should be public (getters/setters)
+- Validation can be applied inside setters
+- Improves maintainability
+
+--------------------------------------------------
+
+Real-Life Example:
+Bank Account:
+- Balance is hidden (private)
+- Access through methods like deposit() and withdraw()
+
+--------------------------------------------------
+
+Advantages:
+- Data security
+- Easy debugging
+- Better control
+- Code reusability
+
+--------------------------------------------------
+
+Disadvantages:
+- More code (getters/setters)
+- Slightly complex for beginners
+
+--------------------------------------------------
+
+Exam Definition:
+Encapsulation is the process of wrapping data and methods into a single unit
+and restricting direct access to data using access modifiers.
