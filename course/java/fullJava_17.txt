@@ -4,3 +4,8 @@ low level abstraction
 
 high level abstraction 
 
+Polymorphism :  
+
+compile time -> method overloading
+run time -> method overriging 
+
