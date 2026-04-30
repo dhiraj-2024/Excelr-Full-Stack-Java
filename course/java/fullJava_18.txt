@@ -1,0 +1,6 @@
+why only one public class exist in one java file : 
+
+it goes easy to find jvm and run the procram no need to create object of the class
+
+
+Autoboxing and unboxing 
