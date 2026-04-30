@@ -1,6 +1,6 @@
 // FIND AND PRINT THE PRODUCT OF ALL DIGITS OF THE GIVEN NUMBER
 
-public class Problem_10 {
+public class Problem_9 {
     public static void main(String[] args) {
         
         int n =113032;
