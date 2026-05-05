@@ -9,3 +9,7 @@ public class Problem_18 {
         }
     }
 }
+
+
+
+// problem 18 is remaining 
