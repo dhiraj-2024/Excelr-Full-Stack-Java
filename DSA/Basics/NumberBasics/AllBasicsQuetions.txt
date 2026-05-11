@@ -1,0 +1,50 @@
+🔢 SECTION 1: Number Basics
+1. Count digits in number ✅
+2. Reverse a number ✅
+3. Check palindrome number ✅
+4. Sum of digits ✅
+5. Product of digits ✅
+6. Find largest digit ✅
+7. Find smallest digit ✅
+8. Check even/odd ✅
+9. Check prime number ✅
+10.Print all primes in range ✅
+11.Factorial of number ✅
+12.Fibonacci series ✅
+13.Check Armstrong number
+Check perfect number
+Find GCD (HCF)
+Find LCM
+Check strong number
+Sum of first n numbers
+
+🔁 SECTION 2: Loop + Pattern Thinking
+Print numbers 1 to n
+Print even numbers
+Print odd numbers
+Sum of even numbers
+Sum of odd numbers
+Multiplication table
+Reverse multiplication table
+Count numbers divisible by 3
+
+🔤 SECTION 4: Basic String Logic
+Reverse a string
+Check palindrome string
+Count vowels
+Count consonants
+Count words in sentence
+Convert lowercase to uppercase
+Remove spaces
+Find frequency of character
+
+
+🧠 SECTION 5: Thinking Problems
+Swap two numbers (with/without temp)
+Check number is positive/negative
+Find largest of 3 numbers
+Find second largest
+Find sum of natural numbers using formula
+Print factors of number
+Count factors
+Check perfect square
