@@ -1,0 +1,104 @@
+REACT FUNDAMENTALS 
+
+What is React?✅
+What is JSX?✅
+What are Components in React?✅
+What are Props in React?✅
+What is State in React?✅
+What is useEffect?✅
+What is Virtual DOM?✅
+What are Keys in React?✅
+Controlled vs Uncontrolled Components✅
+What is useRef?✅
+What is Context API?✅
+
+REMAINING IMPORTANT HOOKS
+
+What is useMemo?✅
+What is useCallback?✅
+Difference between useMemo and useCallback✅
+What is React.memo?✅
+What are Custom Hooks?✅
+What is useReducer?✅
+Difference between useState and useReducer✅
+
+REACT RENDERING & PERFORMANCE
+
+What causes re-render in React?✅
+How React rendering works?✅
+What is reconciliation?✅
+What is diffing algorithm?✅
+How to optimize React performance?✅
+Why React is fast?✅
+What is memoization in React?✅
+
+REACT ROUTER
+
+What is React Router?✅
+Difference between Link and anchor tag✅
+What is BrowserRouter?✅
+What is useNavigate?✅
+What are dynamic routes?✅
+What is nested routing?✅
+
+API CALLS & ASYNC
+
+How to fetch API in React?✅
+Why API calls happen inside useEffect?✅
+How to handle loading and error states?✅
+How to handle async/await in React?✅
+
+FORMS & EVENTS
+
+How event handling works in React?
+What are synthetic events?
+How form handling works in React?
+What is form validation?
+Difference between onChange and onSubmit
+
+REACT ADVANCED
+
+What are Higher Order Components (HOC)?
+What are Render Props?
+What is lazy loading?
+What is Suspense?
+What are Error Boundaries?
+What are portals in React?
+What is StrictMode?
+What is hydration in React?
+
+STATE MANAGEMENT
+
+What is Redux?
+What is Redux Toolkit?
+Difference between Redux and Context API
+What are reducers and actions?
+What is dispatch?
+
+LIFECYCLE QUESTIONS
+
+React component lifecycle
+componentDidMount vs useEffect
+componentWillUnmount equivalent in hooks
+What is cleanup function?
+
+PRACTICAL STARTUP QUESTIONS
+
+Build counter app explanation
+Build todo app explanation
+Search filter implementation
+Pagination implementation
+Debouncing in React
+Infinite scrolling
+Dark mode implementation
+Authentication flow in React
+
+MOST IMPORTANT THEORY QUESTIONS
+
+Props vs State
+useRef vs useState
+Context API vs Redux
+Controlled vs Uncontrolled Components
+Real DOM vs Virtual DOM
+useMemo vs useCallback
+Functional vs Class Components
