@@ -1,62 +1,66 @@
-const users = [
-    {
-        id: 1,
-        name: "Dhiraj",
-    },
-];
-
-const posts = [
-    {
-        id: 101,
-        userId: 1,
-        title: "JavaScript Basics",
-    },
-];
-
-const comments = [
-    {
-        id: 1001,
-        postId: 101,
-        userId: 2,
-        comment: "Nice post",
-    },
-];
-
-const authors = [
-    {
-        id: 2,
-        name: "Rahul",
-    },
-];
-
-
 function getUser(id, callback) {
-    const user = users.find((user) => {
-        users.id === id;
-    })
-    callback(users);
+    setTimeout(() => {
+        console.log("User fetched");
+
+        callback({
+            id: 1,
+            name: "Dhiraj",
+        });
+    }, 1000);
 }
 
 function getPosts(userId, callback) {
-    const post = posts.filter((post) => {
-        posts.userId === userId;
-    })
+    setTimeout(() => {
+        console.log("Posts fetched");
+
+        callback([
+            {
+                id: 101,
+                title: "JavaScript",
+            },
+        ]);
+    }, 1000);
 }
 
+function getComments(postId, callback) {
+    setTimeout(() => {
+        console.log("Comments fetched");
 
+        callback([
+            {
+                id: 1001,
+                text: "Nice",
+                userId: 5,
+            },
+        ]);
+    }, 1000);
+}
 
+function getAuthor(userId, callback) {
+    setTimeout(() => {
+        console.log("Author fetched");
 
+        callback({
+            id: 5,
+            name: "Rahul",
+        });
+    }, 1000);
+}
 
-
+// CALLBACK HELL
 
 getUser(1, function (user) {
-    console.log("User:", user);
-    getPosts(posts.id, function (post) {
-        getComment(comments.id, function (comment) {
-            getAuthor(authors.id, function (authors) {
-                console.log(authors.name)
-            })
-        })
-    })
-})
+    console.log(user);
 
+    getPosts(user.id, function (posts) {
+        console.log(posts);
+
+        getComments(posts[0].id, function (comments) {
+            console.log(comments);
+
+            getAuthor(comments[0].userId, function (author) {
+                console.log(author);
+            });
+        });
+    });
+});
