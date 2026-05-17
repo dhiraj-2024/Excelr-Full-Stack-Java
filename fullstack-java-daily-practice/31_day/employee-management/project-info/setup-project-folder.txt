@@ -1,0 +1,31 @@
+
+
+start the steup main project now ; 
+create employee app :
+python manage.py startapp employees
+
+
+folder structure we will get to see : 
+employees/
+│
+├── admin.py
+├── apps.py
+├── migrations/
+├── models.py
+├── tests.py
+├── views.py
+
+
+
+| File        | Purpose            |
+| ----------- | ------------------ |
+| models.py   | Database models    |
+| views.py    | API logic          |
+| admin.py    | Django admin panel |
+| migrations/ | Database changes   |
+
+
+
+rajputdhiraj
+rajputdhiraj1852@gmail.com
+hellodhiraj

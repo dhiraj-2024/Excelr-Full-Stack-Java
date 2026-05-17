@@ -1,0 +1,35 @@
+project folder name 
+cd project folder name 
+
+check python version : 
+python3 --version 
+
+activate virtual env 
+python3 -m venv venv
+source venv/bin/activate  for mac : 
+
+install django
+pip install django
+
+install REST frameworks
+pip install djangorestframework
+
+create django project : 
+django-admin startproject backend .         it create /backend and the manage.py 
+
+
+project structure meaning : 
+
+| File        | Purpose               |
+| ----------- | --------------------- |
+| manage.py   | Django command runner |
+| settings.py | Project configuration |
+| urls.py     | Routes                |
+| wsgi.py     | Deployment            |
+| asgi.py     | Async server config   |
+
+
+runserver : 
+python manage.py runserver
+
+
