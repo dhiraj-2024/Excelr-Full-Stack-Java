@@ -157,3 +157,41 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
 STEP 16: 
 CREATE THE FIRST API views
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRACTICE PRACTICE 
+
+UserMnagement
+cd UserMnagement
+python3 --version
+python3 -m venv venv
+source venv/bin/activate
+pip install django djangorestframework
+django-admin startproject Users-project .
+python manage.py runserver
+python manage.py startapp users
+register in settin.py 
+create model in users/model
+apply createmigrations
+then python manage.py migrate 
+create admin pannel using superuser
+register model in admin.py of the project 
+run server 
+add serializer.py in the app folder to convert model data to object json
+
