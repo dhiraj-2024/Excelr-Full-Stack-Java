@@ -1,24 +1,20 @@
-
-
+// find minimum sum 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = { 2, 1, 5, 1, 3, 2 };
-        // int[] nums = { -2, -1, -5, -3, -4};
-        // int[] nums = { 1, 2, 3, 4};
-        int w = 3;
+        int[] nums = { -2, -1, -5, -3, -4};
+        int w = 2;
         int current = 0;
         for (int i = 0; i < w; i++) {
             current += nums[i];
         }
-
-        int max = current;
+        int min = current;
         for (int i = 1; i <= nums.length - w; i++) {
             current = current - nums[i - 1] + nums[i + w - 1];
-            if (current > max) {
-                max = current;
+
+            if (current < min) {
+                min = current;
             }
         }
-        
-        System.out.println(max);
+        System.out.println(min);
     }
 }
