@@ -63,10 +63,14 @@ for (const user of users) {
 
 const seen = new Set();
 const res = [];
+const duplicatemails = [];
 for (const user of users) {
     if (!seen.has(user.email)) {
         seen.add(user.email);
         res.push(user);
+    } else {
+        duplicatemails.push(user.email);
     }
 };
-console.log(res);
+// console.log(res);
+console.log(duplicatemails);
