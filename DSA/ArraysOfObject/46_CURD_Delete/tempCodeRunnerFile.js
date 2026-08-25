@@ -1,0 +1,1 @@
+user.salary < 50000
