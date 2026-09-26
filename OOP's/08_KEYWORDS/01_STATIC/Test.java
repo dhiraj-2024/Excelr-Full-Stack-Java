@@ -13,8 +13,8 @@ public class Test {
         t1.x = 100;
         t2.x = 200;
 
-        t1.y = 300;
-        t2.y = 400;
+        // t1.y = 300;
+        // t2.y = 400;
 
         System.out.println(t1.x);
         System.out.println(t2.x);
