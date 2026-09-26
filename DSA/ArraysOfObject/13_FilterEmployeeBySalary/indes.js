@@ -56,4 +56,4 @@ for (const emp of employees) {
 // using filter method; 
 
 const FiftyAboveEmp = employees.filter((emp) => { return emp.salary > 50000 });
-console.log(FiftyAboveEmp);
+console.log(FiftyAboveEmp); 
