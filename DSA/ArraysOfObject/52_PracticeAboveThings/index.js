@@ -125,5 +125,127 @@ const agerange = employees.filter((emp) => {
 
 const answer = employees.filter((emp) => emp.active === true && (emp.department === "IT" || emp.department === "HR") && emp.salary >= 60000);
 
-console.log(answer)
+// console.log(answer)
 
+
+
+//! map() 
+
+//* problem 1
+
+const containName = employees.map(emp => emp.name);
+// console.log(containName)
+
+//* problem 2
+const nameSalary = employees.map((emp) =>
+{
+  return {
+    name: emp.name,
+    salary:emp.salary
+  }
+}
+)
+
+// console.log(nameSalary)
+
+
+//* problem 3 
+
+const salaryHike = employees.map((emp) => {
+  return {
+    name: emp.name,
+    salary: emp.salary,
+    hikesalary: 10 / 100 * emp.salary + emp.salary
+  };
+});
+// console.log(salaryHike)
+//* problem 4
+const checkStatus = employees.map(emp => ({
+  ...emp,
+  status: emp.salary >= 60000 ? "Senior" : "Junior"
+}))
+// console.log(checkStatus);
+
+
+//* problem 5  return the name of only active employes in it department 
+
+const output = employees
+  .filter(emp => emp.department === "IT")
+  .map(emp => emp.name);
+
+
+// console.log(output)
+  
+
+//! reduce()
+//* problem 1 : Calculate the total salary of all employees.
+
+const totalSal = employees.reduce((total, emp) => {
+ return total += emp.salary;
+
+},0)
+
+// console.log(totalSal);
+
+
+//* problem 2 : Calculate the average salary.
+const avgsal = totalSal / employees.length;
+// console.log(avgsal);
+
+
+//* problem 3 : Find the employee with the minimum salary.
+
+const minsalary = employees.reduce((minsal, emp) => {
+  if (emp.salary < minsal) {
+    minsal = emp.salary;
+  }
+  return minsal;
+
+}, Number.MAX_VALUE)
+
+// console.log(minsalary);
+
+
+//* problem 4 : Count how many employees are active.
+
+const activeemp = employees.reduce((count, emp) => {
+  if (emp.active === true) {
+    count++;
+  }
+  return count;
+},0);
+console.log(activeemp)
+
+
+//* problem 5 : Calculate the total salary of IT employees only.
+
+const itEmpTotalSalary = employees
+  .filter((emp) => emp.department === "IT")
+  .reduce((totalSal, emp) => {
+    return totalSal += emp.salary;
+  }, 0);
+
+// console.log(itEmpTotalSalary);
+
+
+//* problem 6 : Create a department-wise salary summary:
+
+
+const salarySummury = employees.reduce((group, emp) => {
+  if (!group[emp.department]) {
+    group[emp.department] = 0;
+  }
+  group[emp.department] += emp.salary;
+  return group;
+},{})
+
+
+// console.log(salarySummury)
+
+
+//! sort() 
+//* problem 1 : Sort employees from lowest salary → highest salary.
+
+const sortBySalary = [...employees].sort((a, b) => a.salary - b.salary)
+  .map(emp => ({name: emp.name , salary: emp.salary}));
+console.log(sortBySalary)
