@@ -35,9 +35,9 @@ function User({ name, city, greet }) {
 
     return (
         <>
-            {/* <h1>This is user page</h1>
+            <h1>This is user page</h1>
             <h2>hello {name ?? "Guest"}</h2>
-            <h3>your city is {city ?? "mumbai"}</h3> */}
+            <h3>your city is {city ?? "mumbai"}</h3>
             <p>{greet}</p>
             <h4>Count : {count}</h4>
             <button onClick={increment} >Increase ++</button>

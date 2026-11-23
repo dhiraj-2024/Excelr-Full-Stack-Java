@@ -13,11 +13,9 @@ function App() {
   return (
     <>
       <h1>Welcom to the App</h1>
-      <User
-        name={name}
+      <User name={name}
         city="nashik"
-        greet={greet()}
-      />
+        greet={greet()} />
     </>
   )
 }
